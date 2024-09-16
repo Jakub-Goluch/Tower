@@ -1,7 +1,6 @@
 extends TextureButton
 
 var DRAGPREVIEW
-var flagID
 signal flags_changed
 
 func _ready():

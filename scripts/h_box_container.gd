@@ -25,5 +25,5 @@ func check_order():
 			print(false)
 			return false
 	print(true)
-	print("***PUZZLE SOLVED***")
+	print("***PUZZLE SOLVED - LEFT***")
 	return true

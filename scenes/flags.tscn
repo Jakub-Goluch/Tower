@@ -13,13 +13,15 @@
 [node name="Flags" type="Node2D"]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
+offset_right = 84.0
 offset_bottom = 40.0
+theme_override_constants/separation = 10
 alignment = 1
 script = ExtResource("1_8ib66")
 
 [node name="1" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/1"]
 layout_mode = 2
@@ -30,6 +32,7 @@ script = ExtResource("3_p38cb")
 
 [node name="2" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/2"]
 layout_mode = 2
@@ -40,6 +43,7 @@ script = ExtResource("3_p38cb")
 
 [node name="3" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/3"]
 layout_mode = 2
@@ -50,6 +54,7 @@ script = ExtResource("3_p38cb")
 
 [node name="4" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/4"]
 layout_mode = 2
