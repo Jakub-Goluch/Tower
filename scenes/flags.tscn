@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8dllr5i1c68m"]
+[gd_scene load_steps=10 format=3 uid="uid://c8dllr5i1c68m"]
 
 [ext_resource type="Texture2D" uid="uid://w3f82k478gdw" path="res://assets/flag1.png" id="1_1rv6i"]
+[ext_resource type="Script" path="res://scripts/h_box_container.gd" id="1_8ib66"]
 [ext_resource type="Texture2D" uid="uid://djmwprvxbhee7" path="res://assets/flag1_drag.png" id="2_f5kmf"]
 [ext_resource type="Script" path="res://scripts/texture_button.gd" id="3_p38cb"]
 [ext_resource type="Texture2D" uid="uid://bhu8shqogj4ki" path="res://assets/flag2.png" id="3_ws6xg"]
@@ -14,41 +15,43 @@
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+alignment = 1
+script = ExtResource("1_8ib66")
 
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+[node name="1" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/CenterContainer"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/1"]
 layout_mode = 2
 texture_normal = ExtResource("1_1rv6i")
 texture_pressed = ExtResource("2_f5kmf")
 texture_hover = ExtResource("2_f5kmf")
 script = ExtResource("3_p38cb")
 
-[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer"]
+[node name="2" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/CenterContainer2"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/2"]
 layout_mode = 2
 texture_normal = ExtResource("3_ws6xg")
 texture_pressed = ExtResource("4_4ybqf")
 texture_hover = ExtResource("4_4ybqf")
 script = ExtResource("3_p38cb")
 
-[node name="CenterContainer3" type="CenterContainer" parent="HBoxContainer"]
+[node name="3" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/CenterContainer3"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/3"]
 layout_mode = 2
 texture_normal = ExtResource("5_3y16q")
 texture_pressed = ExtResource("5_3y16q")
 texture_hover = ExtResource("5_3y16q")
 script = ExtResource("3_p38cb")
 
-[node name="CenterContainer4" type="CenterContainer" parent="HBoxContainer"]
+[node name="4" type="CenterContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/CenterContainer4"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/4"]
 layout_mode = 2
 texture_normal = ExtResource("7_tsild")
 texture_pressed = ExtResource("8_s5itt")

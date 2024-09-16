@@ -1,6 +1,8 @@
 extends TextureButton
 
 var DRAGPREVIEW
+var flagID
+signal flags_changed
 
 func _ready():
 	DRAGPREVIEW = preload("res://scenes/drag_preview.tscn")
@@ -12,6 +14,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	var data = {}
 	data["origin_node"] = self
 	data["origin_slot"] = slot
+	#data["origin_flag_ID"] = flagID
 	data["origin_texture_normal"] = texture_normal
 	data["origin_texture_pressed"] = texture_pressed
 	data["origin_texture_hover"] = texture_hover
@@ -28,6 +31,7 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	data["target_texture_normal"] = texture_normal
 	data["target_texture_pressed"] = texture_pressed
 	data["target_texture_hover"] = texture_hover
+	#data["target_flag_ID"] = flagID
 	
 	return true # bc flags can be moved to any slot -> can later change
 	
@@ -41,5 +45,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	texture_normal = data["origin_texture_normal"]
 	texture_pressed = data["origin_texture_pressed"]
 	texture_hover = data["origin_texture_hover"]
+	
+	emit_signal("flags_changed") # signal to box to check the order
 	
 	# add sound effect of switching flags later
