@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://clvldxsuknmrh"]
+
+[ext_resource type="Script" path="res://scripts/book.gd" id="1_5bxu7"]
+[ext_resource type="Texture2D" uid="uid://c4dmcp5h2fl7g" path="res://assets/open_book.png" id="1_hycy6"]
+[ext_resource type="Script" path="res://scripts/book_button.gd" id="2_l3obp"]
+
+[node name="Book" type="Node2D"]
+script = ExtResource("1_5bxu7")
+
+[node name="BigBook" type="Sprite2D" parent="."]
+scale = Vector2(0.205714, 0.205714)
+texture = ExtResource("1_hycy6")
+
+[node name="CloseBookButton" type="Button" parent="BigBook"]
+offset_left = 106.944
+offset_top = -106.944
+offset_right = 140.944
+offset_bottom = -75.9444
+text = "X"
+
+[node name="BookButton" type="Button" parent="."]
+modulate = Color(0.49942, 0, 0.105399, 1)
+offset_left = 21.0
+offset_top = 8.0
+offset_right = 29.0
+offset_bottom = 16.0
+script = ExtResource("2_l3obp")
