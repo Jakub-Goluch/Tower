@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d2cduquntq2xl"
-path="res://.godot/imported/gothic-pixel-font.ttf-36c61a02965ddee7c07f566bb684ec16.fontdata"
+path="res://.godot/imported/gothic-pixel-font.ttf-29e43589d62a318054eb1b0afec0229e.fontdata"
 
 [deps]
 
-source_file="res://gothic-pixel-font.ttf"
-dest_files=["res://.godot/imported/gothic-pixel-font.ttf-36c61a02965ddee7c07f566bb684ec16.fontdata"]
+source_file="res://assets/gothic-pixel-font.ttf"
+dest_files=["res://.godot/imported/gothic-pixel-font.ttf-29e43589d62a318054eb1b0afec0229e.fontdata"]
 
 [params]
 

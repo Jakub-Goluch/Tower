@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://by5q3f2iqsjfo"]
 
-[ext_resource type="Texture2D" uid="uid://o75xxtomuevo" path="res://plaaayyy.png" id="1_cf5n1"]
-[ext_resource type="Texture2D" uid="uid://bmcojutl1d2j0" path="res://optionss.png" id="2_xnxwi"]
-[ext_resource type="Texture2D" uid="uid://c0ey7hb431r7j" path="res://exit.png" id="3_fcmdn"]
-[ext_resource type="FontFile" uid="uid://d2cduquntq2xl" path="res://gothic-pixel-font.ttf" id="4_rmupt"]
+[ext_resource type="Texture2D" uid="uid://o75xxtomuevo" path="res://assets/plaaayyy.png" id="1_0r40l"]
+[ext_resource type="Texture2D" uid="uid://bmcojutl1d2j0" path="res://assets/optionss.png" id="2_tga4a"]
+[ext_resource type="Texture2D" uid="uid://c0ey7hb431r7j" path="res://assets/exit.png" id="3_heshp"]
+[ext_resource type="FontFile" uid="uid://d2cduquntq2xl" path="res://assets/gothic-pixel-font.ttf" id="4_qgqbp"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -37,7 +37,7 @@ text = "start"
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/StartButton"]
 position = Vector2(136.5, 30.5)
 scale = Vector2(1.44048, 1.44048)
-texture = ExtResource("1_cf5n1")
+texture = ExtResource("1_0r40l")
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -47,7 +47,7 @@ text = "options"
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/OptionsButton"]
 position = Vector2(139.5, 30.5)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("2_xnxwi")
+texture = ExtResource("2_tga4a")
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -57,7 +57,7 @@ text = "quit"
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/QuitButton"]
 position = Vector2(138.5, 29.5)
 scale = Vector2(1.58, 1.58)
-texture = ExtResource("3_fcmdn")
+texture = ExtResource("3_heshp")
 
 [node name="Panel" type="Panel" parent="."]
 modulate = Color(0.881941, 0.85062, 0.686666, 1)
@@ -78,7 +78,7 @@ offset_left = 278.0
 offset_top = 110.0
 offset_right = 877.0
 offset_bottom = 285.0
-theme_override_fonts/font = ExtResource("4_rmupt")
+theme_override_fonts/font = ExtResource("4_qgqbp")
 theme_override_font_sizes/font_size = 128
 text = "super giera"
 horizontal_alignment = 1

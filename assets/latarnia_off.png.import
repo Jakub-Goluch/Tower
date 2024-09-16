@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o75xxtomuevo"
-path="res://.godot/imported/plaaayyy.png-7e7fd3da75253df0f5c99e35a35feb55.ctex"
+uid="uid://5tw6odx4gabf"
+path="res://.godot/imported/latarnia_off.png-b49e3d37a6bde7eeee1be8321b24fe35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://plaaayyy.png"
-dest_files=["res://.godot/imported/plaaayyy.png-7e7fd3da75253df0f5c99e35a35feb55.ctex"]
+source_file="res://assets/latarnia_off.png"
+dest_files=["res://.godot/imported/latarnia_off.png-b49e3d37a6bde7eeee1be8321b24fe35.ctex"]
 
 [params]
 
