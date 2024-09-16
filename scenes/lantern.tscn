@@ -1,12 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck6wbiwqico81"]
+[gd_scene load_steps=6 format=3 uid="uid://ck6wbiwqico81"]
 
 [ext_resource type="Script" path="res://scripts/lantern.gd" id="1_b5ypw"]
 [ext_resource type="Texture2D" uid="uid://dhx8ci85kx610" path="res://assets/latarnia_on.png" id="2_d5cn3"]
+[ext_resource type="Texture2D" uid="uid://dn7wxfrwbtny8" path="res://assets/32x32 textures (60).png" id="2_en747"]
 [ext_resource type="Texture2D" uid="uid://5tw6odx4gabf" path="res://assets/latarnia_off.png" id="3_0fsp4"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="4_iutwu"]
 
 [node name="Lantern" type="Node2D"]
 script = ExtResource("1_b5ypw")
+
+[node name="Aura" type="PointLight2D" parent="."]
+position = Vector2(0, 5)
+color = Color(0.71168, 0.501253, 1.92523e-07, 1)
+energy = 1.5
+texture = ExtResource("2_en747")
 
 [node name="Sprite_ON" type="Sprite2D" parent="."]
 texture = ExtResource("2_d5cn3")
