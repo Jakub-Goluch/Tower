@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1n5avrqf8mde"]
+
+[ext_resource type="Script" path="res://scripts/inventory_item.gd" id="1_1s827"]
+[ext_resource type="Texture2D" uid="uid://3t5nfoebuew4" path="res://assets/Dungeon_Tileset.png" id="1_e5nhr"]
+
+[sub_resource type="Gradient" id="Gradient_tslrt"]
+offsets = PackedFloat32Array(0, 0.379518, 0.674699, 0.740964, 0.993976, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6eik0"]
+gradient = SubResource("Gradient_tslrt")
+width = 13
+height = 13
+
+[node name="InventoryItem" type="Panel"]
+custom_minimum_size = Vector2(13, 13)
+offset_right = 10.0
+offset_bottom = 13.0
+script = ExtResource("1_1s827")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -2)
+scale = Vector2(1.12069, 1)
+texture = ExtResource("1_e5nhr")
+centered = false
+hframes = 10
+vframes = 10
+frame = 90
+
+[node name="whiteground" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.658824)
+z_index = -1
+position = Vector2(6.5, 6.5)
+texture = SubResource("GradientTexture2D_6eik0")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
