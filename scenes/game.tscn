@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c1mgnwc8ftc1c"]
+[gd_scene load_steps=26 format=3 uid="uid://c1mgnwc8ftc1c"]
 
 [ext_resource type="Texture2D" uid="uid://cgsknbu8iahdn" path="res://assets/ts_namioty_wazony.png" id="1_othos"]
 [ext_resource type="Texture2D" uid="uid://dybfgbkk5raps" path="res://assets/ts_pochodnie_jedzenie.png" id="2_sqyr7"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dswltqds8kcul" path="res://assets/ts_fontanny_flagi.png" id="10_8eq6l"]
 [ext_resource type="Texture2D" uid="uid://c7bic6dap52q3" path="res://assets/ts_meble.png" id="11_xejhq"]
 [ext_resource type="PackedScene" uid="uid://ck6wbiwqico81" path="res://scenes/lantern.tscn" id="12_u0hob"]
+[ext_resource type="PackedScene" uid="uid://dftb3u2jpvj36" path="res://scenes/inventory.tscn" id="13_vegyk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j4su"]
 texture = ExtResource("1_othos")
@@ -25932,3 +25933,18 @@ position = Vector2(65, 62)
 
 [node name="Lantern3" parent="LanternManager" instance=ExtResource("12_u0hob")]
 position = Vector2(41, 62)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("13_vegyk")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.5
+offset_top = -15.0
+offset_right = 29.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0

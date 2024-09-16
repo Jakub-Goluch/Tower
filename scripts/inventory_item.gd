@@ -11,6 +11,6 @@ func _on_mouse_exited():
 	mouse_on = false
 
 func _process(delta):
-	if Input.is_action_just_pressed("left_mouse") and mouse_on and sprite.texture != null:
+	if Input.is_action_just_pressed("left_mouse") and mouse_on:
 		print(inventory_item.name)
 		Events.item_selected.emit(self)
