@@ -3,6 +3,6 @@
 [ext_resource type="Script" path="res://scripts/drag_preview.gd" id="1_yxk5y"]
 
 [node name="DragPreview" type="Sprite2D"]
-modulate = Color(1, 1, 1, 0.745098)
+modulate = Color(1, 1, 1, 0.627451)
 rotation = 0.261799
 script = ExtResource("1_yxk5y")

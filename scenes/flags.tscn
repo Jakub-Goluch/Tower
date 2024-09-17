@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://c8dllr5i1c68m"]
 
-[ext_resource type="Texture2D" uid="uid://w3f82k478gdw" path="res://assets/flag1.png" id="1_1rv6i"]
+[ext_resource type="Texture2D" uid="uid://w3f82k478gdw" path="res://assets/interactable_sprites/flag1.png" id="1_1rv6i"]
 [ext_resource type="Script" path="res://scripts/h_box_container.gd" id="1_8ib66"]
-[ext_resource type="Texture2D" uid="uid://djmwprvxbhee7" path="res://assets/flag1_drag.png" id="2_f5kmf"]
+[ext_resource type="Texture2D" uid="uid://djmwprvxbhee7" path="res://assets/interactable_sprites/flag1_drag.png" id="2_f5kmf"]
 [ext_resource type="Script" path="res://scripts/texture_button.gd" id="3_p38cb"]
-[ext_resource type="Texture2D" uid="uid://bhu8shqogj4ki" path="res://assets/flag2.png" id="3_ws6xg"]
-[ext_resource type="Texture2D" uid="uid://bbv8yaym6unow" path="res://assets/flag2_drag.png" id="4_4ybqf"]
-[ext_resource type="Texture2D" uid="uid://c8ggarrpi1rsc" path="res://assets/flag3.png" id="5_3y16q"]
-[ext_resource type="Texture2D" uid="uid://bpn0ealqyqgkm" path="res://assets/flag4.png" id="7_tsild"]
-[ext_resource type="Texture2D" uid="uid://dglg7yh3epof7" path="res://assets/flag4_drag.png" id="8_s5itt"]
+[ext_resource type="Texture2D" uid="uid://bhu8shqogj4ki" path="res://assets/interactable_sprites/flag2.png" id="3_ws6xg"]
+[ext_resource type="Texture2D" uid="uid://bbv8yaym6unow" path="res://assets/interactable_sprites/flag2_drag.png" id="4_4ybqf"]
+[ext_resource type="Texture2D" uid="uid://c8ggarrpi1rsc" path="res://assets/interactable_sprites/flag3.png" id="5_3y16q"]
+[ext_resource type="Texture2D" uid="uid://bpn0ealqyqgkm" path="res://assets/interactable_sprites/flag4.png" id="7_tsild"]
+[ext_resource type="Texture2D" uid="uid://dglg7yh3epof7" path="res://assets/interactable_sprites/flag4_drag.png" id="8_s5itt"]
 
 [node name="Flags" type="Node2D"]
 
@@ -25,9 +25,9 @@ size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/1"]
 layout_mode = 2
-texture_normal = ExtResource("1_1rv6i")
-texture_pressed = ExtResource("2_f5kmf")
-texture_hover = ExtResource("2_f5kmf")
+texture_normal = ExtResource("3_ws6xg")
+texture_pressed = ExtResource("4_4ybqf")
+texture_hover = ExtResource("4_4ybqf")
 script = ExtResource("3_p38cb")
 
 [node name="2" type="CenterContainer" parent="HBoxContainer"]
@@ -36,9 +36,9 @@ size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/2"]
 layout_mode = 2
-texture_normal = ExtResource("3_ws6xg")
-texture_pressed = ExtResource("4_4ybqf")
-texture_hover = ExtResource("4_4ybqf")
+texture_normal = ExtResource("5_3y16q")
+texture_pressed = ExtResource("5_3y16q")
+texture_hover = ExtResource("5_3y16q")
 script = ExtResource("3_p38cb")
 
 [node name="3" type="CenterContainer" parent="HBoxContainer"]
@@ -47,9 +47,9 @@ size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/3"]
 layout_mode = 2
-texture_normal = ExtResource("5_3y16q")
-texture_pressed = ExtResource("5_3y16q")
-texture_hover = ExtResource("5_3y16q")
+texture_normal = ExtResource("7_tsild")
+texture_pressed = ExtResource("8_s5itt")
+texture_hover = ExtResource("8_s5itt")
 script = ExtResource("3_p38cb")
 
 [node name="4" type="CenterContainer" parent="HBoxContainer"]
@@ -58,9 +58,9 @@ size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/4"]
 layout_mode = 2
-texture_normal = ExtResource("7_tsild")
-texture_pressed = ExtResource("8_s5itt")
-texture_hover = ExtResource("8_s5itt")
+texture_normal = ExtResource("1_1rv6i")
+texture_pressed = ExtResource("2_f5kmf")
+texture_hover = ExtResource("2_f5kmf")
 script = ExtResource("3_p38cb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
