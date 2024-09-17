@@ -167,11 +167,12 @@ sprite_frames = SubResource("SpriteFrames_ybaec")
 animation = &"flip_page"
 frame = 16
 frame_progress = 1.0
+offset = Vector2(0, -20)
 flip_h = true
 script = ExtResource("18_3dg88")
 
 [node name="Sprite2D2" type="Sprite2D" parent="AnimatedSprite2D"]
-position = Vector2(104, -10)
+position = Vector2(104, -30)
 rotation = 0.785398
 texture = ExtResource("18_35rcm")
 
@@ -185,7 +186,7 @@ rotation = -1.48714
 script = ExtResource("3_rp1c1")
 
 [node name="FlipPage" type="Sprite2D" parent="AnimatedSprite2D"]
-position = Vector2(106, 49)
+position = Vector2(106, 27)
 texture = ExtResource("21_tps7h")
 
 [node name="FlipButton" type="Button" parent="AnimatedSprite2D/FlipPage"]
@@ -197,7 +198,7 @@ offset_bottom = 24.0
 script = ExtResource("22_sgqmw")
 
 [node name="FlipPageBack" type="Sprite2D" parent="AnimatedSprite2D"]
-position = Vector2(-101, 49)
+position = Vector2(-101, 27)
 scale = Vector2(-1, -1)
 texture = ExtResource("21_tps7h")
 

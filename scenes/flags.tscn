@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8dllr5i1c68m"]
+[gd_scene load_steps=11 format=3 uid="uid://c8dllr5i1c68m"]
 
 [ext_resource type="Texture2D" uid="uid://w3f82k478gdw" path="res://assets/interactable_sprites/flag1.png" id="1_1rv6i"]
 [ext_resource type="Script" path="res://scripts/h_box_container.gd" id="1_8ib66"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bhu8shqogj4ki" path="res://assets/interactable_sprites/flag2.png" id="3_ws6xg"]
 [ext_resource type="Texture2D" uid="uid://bbv8yaym6unow" path="res://assets/interactable_sprites/flag2_drag.png" id="4_4ybqf"]
 [ext_resource type="Texture2D" uid="uid://c8ggarrpi1rsc" path="res://assets/interactable_sprites/flag3.png" id="5_3y16q"]
+[ext_resource type="Texture2D" uid="uid://dyoocnxf28x1i" path="res://assets/interactable_sprites/flag3_drag.png" id="6_b5tq4"]
 [ext_resource type="Texture2D" uid="uid://bpn0ealqyqgkm" path="res://assets/interactable_sprites/flag4.png" id="7_tsild"]
 [ext_resource type="Texture2D" uid="uid://dglg7yh3epof7" path="res://assets/interactable_sprites/flag4_drag.png" id="8_s5itt"]
 
@@ -37,8 +38,8 @@ size_flags_vertical = 0
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/2"]
 layout_mode = 2
 texture_normal = ExtResource("5_3y16q")
-texture_pressed = ExtResource("5_3y16q")
-texture_hover = ExtResource("5_3y16q")
+texture_pressed = ExtResource("6_b5tq4")
+texture_hover = ExtResource("6_b5tq4")
 script = ExtResource("3_p38cb")
 
 [node name="3" type="CenterContainer" parent="HBoxContainer"]

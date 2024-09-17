@@ -16,7 +16,7 @@ func _ready():
 	
 func _process(delta):
 	if book_open:
-		Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+		Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(5, 7))
 	
 func open():
 	emit_signal("open_book")
@@ -25,8 +25,8 @@ func open():
 func change_cursor():
 	if !book_open:
 		current_cursor = zoom_cursor
-		Input.set_custom_mouse_cursor(current_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+		Input.set_custom_mouse_cursor(current_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 
 func reset_cursor():
 	current_cursor = normal_cursor
-	Input.set_custom_mouse_cursor(current_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+	Input.set_custom_mouse_cursor(current_cursor, Input.CURSOR_ARROW, Vector2(5, 7))

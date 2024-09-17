@@ -15,7 +15,9 @@ func _ready():
 	book_text.visible = false
 
 	$AnimatedSprite2D.global_position = %Camera2D.global_position
+	$AnimatedSprite2D.global_position.y = %Camera2D.global_position.y - 22 # lift up a bit
 	$BookText.global_position = %Camera2D.global_position
+	$BookText.global_position.y = %Camera2D.global_position.y - 22 # lift up a bit
 	
 func show_book():
 	print("opening book")
