@@ -21,7 +21,7 @@
 [ext_resource type="Script" path="res://scripts/animated_sprite_2d.gd" id="18_3dg88"]
 [ext_resource type="Texture2D" uid="uid://brkpc00uqxixt" path="res://assets/close_book.png" id="18_35rcm"]
 [ext_resource type="Texture2D" uid="uid://dv4mn74euvjyd" path="res://assets/flip_page.png" id="21_tps7h"]
-[ext_resource type="Script" path="res://scenes/flip_button.gd" id="22_sgqmw"]
+[ext_resource type="Script" path="res://scripts/flip_button.gd" id="22_sgqmw"]
 [ext_resource type="PackedScene" uid="uid://03ma7twrr72w" path="res://scenes/book_text.tscn" id="23_otyuk"]
 [ext_resource type="Script" path="res://scripts/flip_button_back.gd" id="23_u4bgh"]
 [ext_resource type="Script" path="res://scripts/book_text.gd" id="24_sueky"]
@@ -162,8 +162,7 @@ animations = [{
 script = ExtResource("1_5bxu7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8.07794e-28, 0)
-scale = Vector2(1, 1)
+position = Vector2(0, -48)
 sprite_frames = SubResource("SpriteFrames_ybaec")
 animation = &"flip_page"
 frame = 16
@@ -174,7 +173,6 @@ script = ExtResource("18_3dg88")
 [node name="Sprite2D2" type="Sprite2D" parent="AnimatedSprite2D"]
 position = Vector2(104, -10)
 rotation = 0.785398
-scale = Vector2(1, 1)
 texture = ExtResource("18_35rcm")
 
 [node name="CloseBookButton" type="Button" parent="AnimatedSprite2D/Sprite2D2"]
@@ -188,7 +186,6 @@ script = ExtResource("3_rp1c1")
 
 [node name="FlipPage" type="Sprite2D" parent="AnimatedSprite2D"]
 position = Vector2(106, 49)
-scale = Vector2(1, 1)
 texture = ExtResource("21_tps7h")
 
 [node name="FlipButton" type="Button" parent="AnimatedSprite2D/FlipPage"]
@@ -213,5 +210,5 @@ offset_bottom = 24.0
 script = ExtResource("23_u4bgh")
 
 [node name="BookText" parent="." instance=ExtResource("23_otyuk")]
-position = Vector2(-1, 15)
+position = Vector2(-1, -29)
 script = ExtResource("24_sueky")
