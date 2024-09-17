@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://d2qat6oue53v7" path="res://assets/background/far-grounds.png" id="26_fmdqc"]
 [ext_resource type="PackedScene" uid="uid://blpwlyqpin5dj" path="res://scenes/candle.tscn" id="27_3i5g7"]
 [ext_resource type="Script" path="res://scripts/candle_manager.gd" id="27_4tdg3"]
-[ext_resource type="PackedScene" uid="uid://nv0lkfvlnnbg" path="res://scenes/fountain.tscn" id="29_2ed5b"
+[ext_resource type="PackedScene" uid="uid://nv0lkfvlnnbg" path="res://scenes/fountain.tscn" id="29_2ed5b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j4su"]
 texture = ExtResource("1_othos")
