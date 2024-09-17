@@ -18,7 +18,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_rvsp2")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
 "speed": 5.0
 }]
@@ -32,6 +32,7 @@ script = ExtResource("1_lyaic")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nhfbt")
 animation = &"open"
+autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="."]
 
