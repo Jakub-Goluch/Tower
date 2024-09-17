@@ -3,9 +3,23 @@ extends TextureButton
 var DRAGPREVIEW
 signal flags_changed
 
+var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
+var normal_cursor = preload("res://assets/cursors/normal_cursor.png")
+
+
 func _ready():
 	DRAGPREVIEW = preload("res://scenes/drag_preview.tscn")
 	
+	# for cursor change
+	connect("mouse_entered", change_cursor)
+	connect("mouse_exited", reset_cursor)
+	
+func change_cursor():
+	Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+
+func reset_cursor():
+	Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+
 # when starting to drag
 func _get_drag_data(at_position: Vector2) -> Variant: 
 	var slot = get_parent().get_name()
