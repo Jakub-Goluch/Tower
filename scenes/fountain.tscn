@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://nv0lkfvlnnbg"]
 
-[ext_resource type="Texture2D" uid="uid://bql4pcnflmlkt" path="res://assets/interactable_sprites/fountain4.png" id="1_vbtha"]
-[ext_resource type="Texture2D" uid="uid://cw48fukwc5pfc" path="res://assets/interactable_sprites/fountain1.png" id="2_o3l24"]
+[ext_resource type="Texture2D" uid="uid://bql4pcnflmlkt" path="res://assets/interactive_sprites/fountain4.png" id="1_vbtha"]
+[ext_resource type="Texture2D" uid="uid://cw48fukwc5pfc" path="res://assets/interactive_sprites/fountain1.png" id="2_o3l24"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hnvhg"]
 atlas = ExtResource("1_vbtha")
@@ -34,4 +34,4 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_yr7ad")
 animation = &"fountain_water"
 autoplay = "fountain_water"
-frame_progress = 0.0418666
+frame_progress = 0.63996
