@@ -7,14 +7,17 @@ var selected_item = null
 func remove_sprite(name: String) -> void:
 	for child in inventory.get_children():
 		if child.name == name:
+			child.item = null
 			child.get_child(0).texture = null
 			selected_item.get_node("whiteground").visible = false
 			selected_item = null
 
-func add_sprite(name: String) -> void:
+func add_sprite(item: Node2D) -> void:
 	for child in inventory.get_children():
-		if child.name == name:
-			child.get_child(0).texture = load("res://.godot/imported/Dungeon_Tileset.png-86e6a28e5a50f836ca9e00bd5d864744.ctex")
+		if child.get_child(0).texture == null:
+			child.item = item
+			child.get_child(0).texture = item.get_child(0).texture
+			break 
 
 func _ready() -> void:
 	Events.item_selected.connect(func(item):
@@ -22,6 +25,9 @@ func _ready() -> void:
 			selected_item.get_node("whiteground").visible = false
 		selected_item = item
 		item.get_node("whiteground").visible = true
+		)
+	Events.item_picked.connect(func(item):
+		add_sprite(item)
 		)
 
 
@@ -32,10 +38,3 @@ func _process(delta):
 			pass
 		else:
 			remove_sprite(selected_item.name)
-		
-	if Input.is_action_just_pressed("down"):
-		print("cipa")
-		if selected_item == null:
-			pass
-		else:
-			add_sprite(selected_item.name)

@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ck6wbiwqico81" path="res://scenes/lantern.tscn" id="12_u0hob"]
 [ext_resource type="FontFile" uid="uid://cka4pau20e84l" path="res://assets/UI/monogram-extended.ttf" id="13_a0y73"]
 [ext_resource type="PackedScene" uid="uid://bgj445opkhce6" path="res://scenes/flags_right.tscn" id="13_nbooo"]
-[ext_resource type="PackedScene" path="res://scenes/inventory.tscn" id="13_vegyk"]
+[ext_resource type="PackedScene" uid="uid://dftb3u2jpvj36" path="res://scenes/inventory.tscn" id="13_vegyk"]
 [ext_resource type="PackedScene" uid="uid://daoirlbxlf0id" path="res://scenes/night_stand.tscn" id="14_m0c5u"]
 [ext_resource type="PackedScene" uid="uid://d275k0mv4iabd" path="res://scenes/book_stand.tscn" id="20_m7rrw"]
 [ext_resource type="Script" path="res://scripts/hand_cursor_area.gd" id="21_5so7m"]
@@ -25982,12 +25982,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -29.5
-offset_top = -15.0
-offset_right = 29.5
-offset_bottom = 0.0
+offset_left = -121.0
+offset_top = -28.0
+offset_right = -39.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(3, 3)
 
 [node name="Book" parent="." instance=ExtResource("12_m1ddo")]
 z_index = 3
