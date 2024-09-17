@@ -3,29 +3,29 @@
 [node name="BookText" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 40.0
-offset_top = 3.0
-offset_right = 80.0
-offset_bottom = 26.0
+offset_left = 88.0
+offset_top = 52.0
+offset_right = 128.0
+offset_bottom = 75.0
 text = "1"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 70.0
-offset_top = 32.0
-offset_right = 110.0
-offset_bottom = 55.0
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 129.0
+offset_bottom = 75.0
 text = "2"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 40.0
-offset_top = 32.0
-offset_right = 80.0
-offset_bottom = 55.0
+offset_left = 89.0
+offset_top = 51.0
+offset_right = 129.0
+offset_bottom = 74.0
 text = "3"
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 69.0
-offset_top = 4.0
-offset_right = 109.0
-offset_bottom = 27.0
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 129.0
+offset_bottom = 75.0
 text = "4"
