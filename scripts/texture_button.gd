@@ -15,10 +15,10 @@ func _ready():
 	connect("mouse_exited", reset_cursor)
 	
 func change_cursor():
-	Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+	Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 
 func reset_cursor():
-	Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
+	Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(5, 7))
 
 # when starting to drag
 func _get_drag_data(at_position: Vector2) -> Variant: 

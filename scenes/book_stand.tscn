@@ -5,7 +5,7 @@
 [node name="BookStand" type="Node2D"]
 
 [node name="StandButton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 0.12, 0.12, 1)
 offset_left = -8.0
 offset_top = -8.0
 offset_right = 9.0

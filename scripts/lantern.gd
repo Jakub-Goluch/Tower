@@ -3,7 +3,9 @@ extends Node2D
 @onready var sprite_on: Sprite2D = $Sprite_ON
 @onready var sprite_off: Sprite2D = $Sprite_OFF
 @onready var aura: PointLight2D = $Aura
+
 var won: bool # disable light switching after solving the puzzle
+@onready var win_sound: AudioStreamPlayer2D = $WinSound
 
 func _ready():
 	$Button.connect("switch", change_light)
@@ -22,3 +24,4 @@ func win():
 	sprite_off.visible = false
 	aura.visible = true
 	won = true
+	win_sound.play()
