@@ -11,7 +11,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_iictu")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -19,7 +19,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_kdx0l")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
 "speed": 5.0
 }]
@@ -32,6 +32,7 @@ script = ExtResource("1_yf2i3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_npt3e")
+
 
 [node name="DoorArea" type="Area2D" parent="."]
 script = ExtResource("4_mokq8")
