@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://c1n5avrqf8mde" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
 
 [node name="Inventory" type="HBoxContainer"]
-offset_right = 59.0
-offset_bottom = 15.0
+offset_right = 64.0
+offset_bottom = 8.0
 theme_override_constants/separation = 10
 script = ExtResource("1_h10o3")
 
@@ -18,4 +18,5 @@ layout_mode = 2
 [node name="InventoryItem3" parent="." instance=ExtResource("1_tcxl8")]
 layout_mode = 2
 
-[editable path="InventoryItem"]
+[node name="InventoryItem4" parent="." instance=ExtResource("1_tcxl8")]
+layout_mode = 2

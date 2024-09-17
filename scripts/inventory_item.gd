@@ -1,5 +1,7 @@
 extends Panel
 
+
+var item: Node2D = null
 var mouse_on = false
 @onready var inventory_item = $"."
 @onready var sprite = $Sprite2D
