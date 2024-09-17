@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d275k0mv4iabd"]
+[gd_scene load_steps=2 format=3 uid="uid://d275k0mv4iabd"]
 
-[ext_resource type="Texture2D" uid="uid://bcl3gqcew842e" path="res://assets/interactable_sprites/bookstand_blue.png" id="1_7lapf"]
 [ext_resource type="Script" path="res://scripts/book_button.gd" id="2_0k24h"]
 
 [node name="BookStand" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_7lapf")
 
 [node name="StandButton" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
