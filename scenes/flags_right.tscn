@@ -63,7 +63,3 @@ texture_normal = ExtResource("7_ova3e")
 texture_pressed = ExtResource("8_e3btt")
 texture_hover = ExtResource("8_e3btt")
 script = ExtResource("4_egyqq")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(34, 17)
-zoom = Vector2(8, 8)

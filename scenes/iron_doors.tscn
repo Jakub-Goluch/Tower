@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bh6mb6qh31v4q"]
+[gd_scene load_steps=9 format=3 uid="uid://b7fp1cnp0leml"]
 
 [ext_resource type="Texture2D" uid="uid://by83eaf68wskg" path="res://assets/doors/ts_girlandy_drzwi (4).png" id="1_1l58y"]
 [ext_resource type="Script" path="res://scripts/iron_doors.gd" id="1_pefts"]
 [ext_resource type="Texture2D" uid="uid://emd2i3iocf0p" path="res://assets/doors/ts_girlandy_drzwi (3).png" id="2_lukvi"]
 [ext_resource type="Texture2D" uid="uid://ct6yj1uujpp8w" path="res://assets/doors/ts_girlandy_drzwi (2).png" id="3_d06f0"]
 [ext_resource type="Texture2D" uid="uid://cf1dcv3ieg2ce" path="res://assets/doors/ts_girlandy_drzwi (1).png" id="4_pmy82"]
+[ext_resource type="Script" path="res://scripts/door_area.gd" id="6_4uvi8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t7mad"]
 animations = [{
@@ -44,14 +45,18 @@ script = ExtResource("1_pefts")
 sprite_frames = SubResource("SpriteFrames_t7mad")
 animation = &"open"
 autoplay = "default"
+frame = 2
+frame_progress = 1.0
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DoorArea" type="Area2D" parent="."]
+script = ExtResource("6_4uvi8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
+visible = false
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_p32hj")
 
 [node name="Marker" type="Marker2D" parent="."]
 
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="DoorArea" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="DoorArea" to="." method="_on_area_2d_mouse_exited"]
