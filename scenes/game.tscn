@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://gne7mr1yeknr" path="res://assets/tiles/ts_drzwi_klucze.png" id="9_h2gfy"]
 [ext_resource type="Texture2D" uid="uid://dswltqds8kcul" path="res://assets/tiles/ts_fontanny_flagi.png" id="10_8eq6l"]
 [ext_resource type="Texture2D" uid="uid://c7bic6dap52q3" path="res://assets/tiles/ts_meble.png" id="11_xejhq"]
+[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="12_btkkc"]
 [ext_resource type="Script" path="res://scripts/lantern_manager.gd" id="12_jswar"]
 [ext_resource type="PackedScene" uid="uid://clvldxsuknmrh" path="res://scenes/book.tscn" id="12_m1ddo"]
 [ext_resource type="PackedScene" uid="uid://c8dllr5i1c68m" path="res://scenes/flags.tscn" id="12_pnw2r"]
@@ -28,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://d2qat6oue53v7" path="res://assets/background/far-grounds.png" id="26_fmdqc"]
 [ext_resource type="PackedScene" uid="uid://blpwlyqpin5dj" path="res://scenes/candle.tscn" id="27_3i5g7"]
 [ext_resource type="Script" path="res://scripts/candle_manager.gd" id="27_4tdg3"]
-[ext_resource type="PackedScene" uid="uid://nv0lkfvlnnbg" path="res://scenes/fountain.tscn" id="29_2ed5b"]
+[ext_resource type="PackedScene" uid="uid://nv0lkfvlnnbg" path="res://scenes/fountain.tscn" id="29_2ed5b"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j4su"]
 texture = ExtResource("1_othos")
@@ -26031,6 +26032,7 @@ unique_name_in_owner = true
 z_index = 3
 position = Vector2(109, 446)
 zoom = Vector2(4, 4)
+script = ExtResource("12_btkkc")
 
 [node name="NightStand" parent="." instance=ExtResource("14_m0c5u")]
 z_index = 1
