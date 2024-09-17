@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://daoirlbxlf0id"]
+
+[ext_resource type="Script" path="res://scripts/night_stand.gd" id="1_k6klu"]
+[ext_resource type="Texture2D" uid="uid://b83r27h4t24j3" path="res://assets/interactable_sprites/nightstand_open.png" id="1_l1c70"]
+[ext_resource type="Texture2D" uid="uid://bjw2gpx0j25o5" path="res://assets/interactable_sprites/nightstand_closed.png" id="2_8igvb"]
+[ext_resource type="Script" path="res://scripts/open_button.gd" id="3_ekddl"]
+
+[node name="NightStand" type="Node2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_k6klu")
+
+[node name="SpriteOpen" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(0.93, 0.93)
+texture = ExtResource("1_l1c70")
+flip_h = true
+
+[node name="SpriteClosed" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.93, 0.93)
+texture = ExtResource("2_8igvb")
+flip_h = true
+
+[node name="OpenButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -9.0
+offset_top = -4.0
+offset_right = 12.0
+offset_bottom = 8.0
+script = ExtResource("3_ekddl")
