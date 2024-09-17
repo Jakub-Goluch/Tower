@@ -3,6 +3,8 @@ extends HBoxContainer
 var correct_flag_order
 var btn_slots
 
+var left_solved = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$"1/TextureButton".connect("flags_changed", check_order)
@@ -22,8 +24,9 @@ func check_order():
 	print("CHECKING ORDER!")
 	for i in range(0, 4):
 		if btn_slots[i].texture_normal.resource_path != correct_flag_order[i]:
-			print(false)
+			#print(false)
 			return false
-	print(true)
+	#print(true)
 	print("***PUZZLE SOLVED - LEFT***")
+	left_solved = true
 	return true
