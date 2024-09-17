@@ -211,5 +211,5 @@ offset_bottom = 24.0
 script = ExtResource("23_u4bgh")
 
 [node name="BookText" parent="." instance=ExtResource("23_otyuk")]
-position = Vector2(-1, -29)
+position = Vector2(10, -32)
 script = ExtResource("24_sueky")

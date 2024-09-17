@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://blpwlyqpin5dj"]
 
 [ext_resource type="Script" path="res://scripts/candle.gd" id="1_37lsh"]
-[ext_resource type="Texture2D" uid="uid://dfcytc5eautmn" path="res://assets/interactable_sprites/candle_corr.png" id="2_im5y7"]
-[ext_resource type="Texture2D" uid="uid://dn7wxfrwbtny8" path="res://assets/interactable_sprites/32x32 textures (60).png" id="2_uly1s"]
+[ext_resource type="Texture2D" uid="uid://dfcytc5eautmn" path="res://assets/interactive_sprites/candle_corr.png" id="2_im5y7"]
+[ext_resource type="Texture2D" uid="uid://dn7wxfrwbtny8" path="res://assets/interactive_sprites/32x32 textures (60).png" id="2_uly1s"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="4_82dl6"]
 [ext_resource type="AudioStream" uid="uid://dt7ef0j8qeaar" path="res://audio/win_sound.wav" id="5_q47is"]
 

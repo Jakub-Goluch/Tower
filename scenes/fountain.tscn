@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://nv0lkfvlnnbg"]
+
+[ext_resource type="Texture2D" uid="uid://bql4pcnflmlkt" path="res://assets/interactive_sprites/fountain4.png" id="1_vbtha"]
+[ext_resource type="Texture2D" uid="uid://cw48fukwc5pfc" path="res://assets/interactive_sprites/fountain1.png" id="2_o3l24"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnvhg"]
+atlas = ExtResource("1_vbtha")
+region = Rect2(0, 0, 70, 79)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkwqx"]
+atlas = ExtResource("2_o3l24")
+region = Rect2(1, 0, 70, 79)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yr7ad"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnvhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkwqx")
+}],
+"loop": true,
+"name": &"fountain_water",
+"speed": 3.0
+}]
+
+[node name="Fountain" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_yr7ad")
+animation = &"fountain_water"
+autoplay = "fountain_water"
+frame_progress = 0.63996
