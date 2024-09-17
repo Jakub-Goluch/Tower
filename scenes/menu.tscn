@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://by5q3f2iqsjfo"]
 
-[ext_resource type="Texture2D" uid="uid://o75xxtomuevo" path="res://assets/plaaayyy.png" id="1_0r40l"]
-[ext_resource type="Texture2D" uid="uid://bmcojutl1d2j0" path="res://assets/optionss.png" id="2_tga4a"]
-[ext_resource type="Texture2D" uid="uid://c0ey7hb431r7j" path="res://assets/exit.png" id="3_heshp"]
-[ext_resource type="FontFile" uid="uid://d2cduquntq2xl" path="res://assets/gothic-pixel-font.ttf" id="4_qgqbp"]
+[ext_resource type="Texture2D" uid="uid://o75xxtomuevo" path="res://assets/UI/plaaayyy.png" id="1_0r40l"]
+[ext_resource type="Texture2D" uid="uid://bmcojutl1d2j0" path="res://assets/UI/optionss.png" id="2_tga4a"]
+[ext_resource type="Texture2D" uid="uid://c0ey7hb431r7j" path="res://assets/UI/exit.png" id="3_heshp"]
+[ext_resource type="FontFile" uid="uid://d2cduquntq2xl" path="res://assets/UI/gothic-pixel-font.ttf" id="4_qgqbp"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

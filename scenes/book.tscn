@@ -1,27 +1,217 @@
-[gd_scene load_steps=4 format=3 uid="uid://clvldxsuknmrh"]
+[gd_scene load_steps=44 format=3 uid="uid://clvldxsuknmrh"]
 
 [ext_resource type="Script" path="res://scripts/book.gd" id="1_5bxu7"]
-[ext_resource type="Texture2D" uid="uid://c4dmcp5h2fl7g" path="res://assets/open_book.png" id="1_hycy6"]
-[ext_resource type="Script" path="res://scripts/book_button.gd" id="2_l3obp"]
+[ext_resource type="Texture2D" uid="uid://bxbiwnnh4j82i" path="res://assets/book_animation/Book1.png" id="2_ynolr"]
+[ext_resource type="Texture2D" uid="uid://bckupd5qlbnsf" path="res://assets/book_animation/Book2.png" id="3_r0x2i"]
+[ext_resource type="Script" path="res://scripts/close_book_button.gd" id="3_rp1c1"]
+[ext_resource type="Texture2D" uid="uid://ddya0g5u6p8cm" path="res://assets/book_animation/Book3.png" id="4_fjk31"]
+[ext_resource type="Texture2D" uid="uid://bp6nwjf33hjci" path="res://assets/book_animation/Book4.png" id="5_p8da0"]
+[ext_resource type="Texture2D" uid="uid://css5aqnf2iypa" path="res://assets/book_animation/Book5.png" id="6_m61hp"]
+[ext_resource type="Texture2D" uid="uid://c447l8v20fto0" path="res://assets/book_animation/Book6.png" id="7_fsfoj"]
+[ext_resource type="Texture2D" uid="uid://rka7n4kaf5m5" path="res://assets/book_animation/Book7.png" id="8_80x8g"]
+[ext_resource type="Texture2D" uid="uid://ook78ic8i1cb" path="res://assets/book_animation/Book8.png" id="9_88sr4"]
+[ext_resource type="Texture2D" uid="uid://dr6ig0x4mf6ua" path="res://assets/book_animation/Book9.png" id="10_vjmdq"]
+[ext_resource type="Texture2D" uid="uid://bkj8xcg1o05v1" path="res://assets/book_animation/Book10.png" id="11_8x6wk"]
+[ext_resource type="Texture2D" uid="uid://co4oi63bppda7" path="res://assets/book_animation/Book11.png" id="12_clgys"]
+[ext_resource type="Texture2D" uid="uid://c7em61cdomqma" path="res://assets/book_animation/Book12.png" id="13_hhwkn"]
+[ext_resource type="Texture2D" uid="uid://b246kycb3dfmm" path="res://assets/book_animation/Book13.png" id="14_0rkvu"]
+[ext_resource type="Texture2D" uid="uid://rxyv61dn6gmo" path="res://assets/book_animation/Book14.png" id="15_uaott"]
+[ext_resource type="Texture2D" uid="uid://deydhwk53d6ka" path="res://assets/book_animation/Book15.png" id="16_moch8"]
+[ext_resource type="Texture2D" uid="uid://da7jlxs2geuhv" path="res://assets/book_animation/Book16.png" id="17_asu0x"]
+[ext_resource type="Script" path="res://scripts/animated_sprite_2d.gd" id="18_3dg88"]
+[ext_resource type="Texture2D" uid="uid://brkpc00uqxixt" path="res://assets/close_book.png" id="18_35rcm"]
+[ext_resource type="Texture2D" uid="uid://dv4mn74euvjyd" path="res://assets/flip_page.png" id="21_tps7h"]
+[ext_resource type="Script" path="res://scenes/flip_button.gd" id="22_sgqmw"]
+[ext_resource type="PackedScene" uid="uid://03ma7twrr72w" path="res://scenes/book_text.tscn" id="23_otyuk"]
+[ext_resource type="Script" path="res://scripts/flip_button_back.gd" id="23_u4bgh"]
+[ext_resource type="Script" path="res://scripts/book_text.gd" id="24_sueky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cefn8"]
+atlas = ExtResource("2_ynolr")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noa2d"]
+atlas = ExtResource("3_r0x2i")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p34m4"]
+atlas = ExtResource("4_fjk31")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvdnd"]
+atlas = ExtResource("5_p8da0")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji3a3"]
+atlas = ExtResource("6_m61hp")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_witqb"]
+atlas = ExtResource("7_fsfoj")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cijp5"]
+atlas = ExtResource("7_fsfoj")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y71t0"]
+atlas = ExtResource("8_80x8g")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py7lk"]
+atlas = ExtResource("9_88sr4")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g54bn"]
+atlas = ExtResource("10_vjmdq")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn5du"]
+atlas = ExtResource("11_8x6wk")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_853sk"]
+atlas = ExtResource("12_clgys")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjgqi"]
+atlas = ExtResource("13_hhwkn")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0xiv"]
+atlas = ExtResource("14_0rkvu")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn5qy"]
+atlas = ExtResource("15_uaott")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsqqk"]
+atlas = ExtResource("16_moch8")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32thk"]
+atlas = ExtResource("17_asu0x")
+region = Rect2(0, 0, 242, 244)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ybaec"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cefn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noa2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p34m4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvdnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji3a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_witqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cijp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y71t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py7lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g54bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn5du")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_853sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjgqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0xiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn5qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsqqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32thk")
+}],
+"loop": false,
+"name": &"flip_page",
+"speed": 15.0
+}]
 
 [node name="Book" type="Node2D"]
 script = ExtResource("1_5bxu7")
 
-[node name="BigBook" type="Sprite2D" parent="."]
-scale = Vector2(0.205714, 0.205714)
-texture = ExtResource("1_hycy6")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8.07794e-28, 0)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_ybaec")
+animation = &"flip_page"
+frame = 16
+frame_progress = 1.0
+flip_h = true
+script = ExtResource("18_3dg88")
 
-[node name="CloseBookButton" type="Button" parent="BigBook"]
-offset_left = 106.944
-offset_top = -106.944
-offset_right = 140.944
-offset_bottom = -75.9444
-text = "X"
+[node name="Sprite2D2" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(104, -10)
+rotation = 0.785398
+scale = Vector2(1, 1)
+texture = ExtResource("18_35rcm")
 
-[node name="BookButton" type="Button" parent="."]
-modulate = Color(0.49942, 0, 0.105399, 1)
-offset_left = 21.0
-offset_top = 8.0
-offset_right = 29.0
-offset_bottom = 16.0
-script = ExtResource("2_l3obp")
+[node name="CloseBookButton" type="Button" parent="AnimatedSprite2D/Sprite2D2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = 6.0
+offset_right = 6.0
+offset_bottom = 20.0
+rotation = -1.48714
+script = ExtResource("3_rp1c1")
+
+[node name="FlipPage" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(106, 49)
+scale = Vector2(1, 1)
+texture = ExtResource("21_tps7h")
+
+[node name="FlipButton" type="Button" parent="AnimatedSprite2D/FlipPage"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 24.0
+script = ExtResource("22_sgqmw")
+
+[node name="FlipPageBack" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-101, 49)
+scale = Vector2(-1, -1)
+texture = ExtResource("21_tps7h")
+
+[node name="FlipButtonBack" type="Button" parent="AnimatedSprite2D/FlipPageBack"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -7.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 24.0
+script = ExtResource("23_u4bgh")
+
+[node name="BookText" parent="." instance=ExtResource("23_otyuk")]
+position = Vector2(-1, 15)
+script = ExtResource("24_sueky")
