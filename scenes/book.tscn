@@ -178,6 +178,7 @@ texture = ExtResource("18_35rcm")
 
 [node name="CloseBookButton" type="Button" parent="AnimatedSprite2D/Sprite2D2"]
 modulate = Color(1, 1, 1, 0)
+z_index = 2
 offset_left = -8.0
 offset_top = 6.0
 offset_right = 6.0
@@ -191,6 +192,7 @@ texture = ExtResource("21_tps7h")
 
 [node name="FlipButton" type="Button" parent="AnimatedSprite2D/FlipPage"]
 modulate = Color(1, 1, 1, 0)
+z_index = 2
 offset_left = -7.0
 offset_top = -24.0
 offset_right = 8.0
@@ -204,6 +206,7 @@ texture = ExtResource("21_tps7h")
 
 [node name="FlipButtonBack" type="Button" parent="AnimatedSprite2D/FlipPageBack"]
 modulate = Color(1, 1, 1, 0)
+z_index = 2
 offset_left = -7.0
 offset_top = -24.0
 offset_right = 8.0
