@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt2ns3bvwxlem"]
+
+[ext_resource type="Script" path="res://scripts/tomatoes.gd" id="1_2bbdy"]
+[ext_resource type="Texture2D" uid="uid://dmywla2cnexkh" path="res://assets/interactive_sprites/tomatoes.png" id="1_kmvyy"]
+[ext_resource type="Script" path="res://scripts/tomato_button.gd" id="2_n3j32"]
+
+[node name="Tomatoes" type="Node2D"]
+z_index = 5
+script = ExtResource("1_2bbdy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kmvyy")
+
+[node name="TomatoButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -12.0
+offset_top = -5.0
+offset_right = 13.0
+offset_bottom = 8.0
+script = ExtResource("2_n3j32")

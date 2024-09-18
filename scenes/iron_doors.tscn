@@ -33,6 +33,14 @@ animations = [{
 "loop": false,
 "name": &"open",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pmy82")
+}],
+"loop": true,
+"name": &"open_already",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p32hj"]
@@ -43,10 +51,8 @@ script = ExtResource("1_pefts")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_t7mad")
-animation = &"open"
+animation = &"open_already"
 autoplay = "default"
-frame = 2
-frame_progress = 1.0
 
 [node name="DoorArea" type="Area2D" parent="."]
 script = ExtResource("6_4uvi8")

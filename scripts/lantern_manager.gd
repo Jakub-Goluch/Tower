@@ -5,6 +5,7 @@ var current_order # int array
 var lanterns # node array
 var correct_ptr
 var won: bool
+@onready var lantern_key: Node2D = $LanternKey
 
 func _ready():
 	correct_order = [1, 3, 2, 3, 2, 2, 1]
@@ -14,7 +15,7 @@ func _ready():
 	$Lantern3/Button.connect("switch", register_click)
 	lanterns = [$Lantern, $Lantern2, $Lantern3]
 	correct_ptr = 0 # mark where in correct array we are
-	
+	lantern_key.visible = false
 
 func register_click(name):
 	#if which.getparent().getname() == "Lantern":
@@ -38,5 +39,6 @@ func register_click(name):
 		if current_order == correct_order:
 			print("CORRECT ORDER CONGRATS")
 			won = true
+			lantern_key.visible = true
 			for x in lanterns:
 				x.win() # switch on all lanterns

@@ -1,16 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dftb3u2jpvj36"]
+[gd_scene load_steps=3 format=3 uid="uid://stew2lac85t2"]
 
 [ext_resource type="Script" path="res://scripts/inventory.gd" id="1_h10o3"]
-[ext_resource type="PackedScene" uid="uid://c1n5avrqf8mde" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
+[ext_resource type="PackedScene" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
 
 [node name="Inventory" type="HBoxContainer"]
-offset_right = 64.0
-offset_bottom = 8.0
-theme_override_constants/separation = 10
+offset_right = 66.0
+offset_bottom = 9.0
+theme_override_constants/separation = 6
 script = ExtResource("1_h10o3")
 
 [node name="InventoryItem" parent="." instance=ExtResource("1_tcxl8")]
 layout_mode = 2
+size_flags_horizontal = 6
 
 [node name="InventoryItem2" parent="." instance=ExtResource("1_tcxl8")]
 layout_mode = 2

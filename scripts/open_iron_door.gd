@@ -1,7 +1,7 @@
 extends Node2D
 
 var mouse_on = false
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite = $Sprite2D
 @onready var marker = $Marker
 
 

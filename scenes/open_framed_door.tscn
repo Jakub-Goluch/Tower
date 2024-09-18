@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://t0hm035efbie"]
+[gd_scene load_steps=4 format=3 uid="uid://vssybbnmhp36"]
 
 [ext_resource type="Script" path="res://scripts/open_framed_door.gd" id="1_pya2m"]
 [ext_resource type="Texture2D" uid="uid://dwf4b337dtypx" path="res://assets/interactive_sprites/ts_drzwi-4.png" id="2_sd6ut"]

@@ -6,7 +6,6 @@ signal flags_changed
 var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
 var normal_cursor = preload("res://assets/cursors/normal_cursor.png")
 
-
 func _ready():
 	DRAGPREVIEW = preload("res://scenes/drag_preview.tscn")
 	
