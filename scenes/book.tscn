@@ -184,10 +184,11 @@ offset_top = 6.0
 offset_right = 6.0
 offset_bottom = 20.0
 rotation = -1.48714
+mouse_filter = 1
 script = ExtResource("3_rp1c1")
 
 [node name="FlipPage" type="Sprite2D" parent="AnimatedSprite2D"]
-position = Vector2(106, 27)
+position = Vector2(131, 27)
 texture = ExtResource("21_tps7h")
 
 [node name="FlipButton" type="Button" parent="AnimatedSprite2D/FlipPage"]
@@ -197,10 +198,11 @@ offset_left = -7.0
 offset_top = -24.0
 offset_right = 8.0
 offset_bottom = 24.0
+mouse_filter = 1
 script = ExtResource("22_sgqmw")
 
 [node name="FlipPageBack" type="Sprite2D" parent="AnimatedSprite2D"]
-position = Vector2(-101, 27)
+position = Vector2(-130, 27)
 scale = Vector2(-1, -1)
 texture = ExtResource("21_tps7h")
 
@@ -211,6 +213,7 @@ offset_left = -7.0
 offset_top = -24.0
 offset_right = 8.0
 offset_bottom = 24.0
+mouse_filter = 1
 script = ExtResource("23_u4bgh")
 
 [node name="BookText" parent="." instance=ExtResource("23_otyuk")]
