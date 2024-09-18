@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://rgr6ainghqcx"]
+
+[ext_resource type="Script" path="res://scripts/trap.gd" id="1_v7o6q"]
+[ext_resource type="Texture2D" uid="uid://d3d64nxvdpj" path="res://assets/interactive_sprites/ts_girlandy_drzwi-3.png" id="2_gcqyx"]
+[ext_resource type="Texture2D" uid="uid://sdiw481lrcok" path="res://assets/interactive_sprites/ts_girlandy_drzwi-4.png" id="3_po5rp"]
+[ext_resource type="Texture2D" uid="uid://d4a2ka18kjyoj" path="res://assets/interactive_sprites/ts_girlandy_drzwi-5.png" id="4_3xg81"]
+[ext_resource type="Texture2D" uid="uid://cmm2x3fnfi5la" path="res://assets/interactive_sprites/ts_girlandy_drzwi-6.png" id="5_ewipv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_15dyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gcqyx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gcqyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_po5rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3xg81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ewipv")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q67a8"]
+size = Vector2(24, 8)
+
+[node name="Trap" type="Node2D"]
+script = ExtResource("1_v7o6q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_15dyd")
+animation = &"open"
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_q67a8")
+
+[node name="Marker" type="Marker2D" parent="."]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
