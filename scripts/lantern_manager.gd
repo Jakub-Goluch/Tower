@@ -24,15 +24,16 @@ func register_click(name):
 			if name == lanterns[i].name:
 				current_order.append(i+1) # as lanterns indexed from 1
 				
-		if current_order[current_order.size()-1] != correct_order[correct_ptr]:
-			current_order.clear() # mistake -> reset array
-			correct_ptr = 0
-			for x in lanterns:
-				x.turn_off() # switch off light on mistake
-		else: # right element clicked
-			print("curr: " + str(current_order[current_order.size()-1]))
-			print("corr: " + str(correct_order[correct_ptr]))
-			correct_ptr += 1 # go to next 
+		if current_order.size() > 0:
+			if current_order[current_order.size()-1] != correct_order[correct_ptr]:
+				current_order.clear() # mistake -> reset array
+				correct_ptr = 0
+				for x in lanterns:
+					x.turn_off() # switch off light on mistake
+			else: # right element clicked
+				print("curr: " + str(current_order[current_order.size()-1]))
+				print("corr: " + str(correct_order[correct_ptr]))
+				correct_ptr += 1 # go to next 
 			
 		if current_order == correct_order:
 			print("CORRECT ORDER CONGRATS")

@@ -1,23 +1,13 @@
-extends Button
+extends Area2D
 
-signal switch
 var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
 var normal_cursor = preload("res://assets/cursors/normal_cursor.png")
 
-
 func _ready():
-	connect("pressed", light_change)
-	
 	connect("mouse_entered", change_cursor)
 	connect("mouse_exited", reset_cursor)
 	
-func light_change():
-	#print("click")
-	if self.name == "CandleButton":
-		emit_signal("switch", self.get_parent().get_parent().name)
-	else:
-		emit_signal("switch", self.get_parent().name)
-
+# change cursor when over door
 func change_cursor():
 	Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 

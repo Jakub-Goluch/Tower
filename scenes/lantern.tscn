@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck6wbiwqico81"]
+[gd_scene load_steps=7 format=3 uid="uid://ck6wbiwqico81"]
 
 [ext_resource type="Script" path="res://scripts/lantern.gd" id="1_b5ypw"]
 [ext_resource type="Texture2D" uid="uid://dhx8ci85kx610" path="res://assets/interactive_sprites/latarnia_on.png" id="2_d5cn3"]
 [ext_resource type="Texture2D" uid="uid://dn7wxfrwbtny8" path="res://assets/interactive_sprites/32x32 textures (60).png" id="2_en747"]
 [ext_resource type="Texture2D" uid="uid://5tw6odx4gabf" path="res://assets/interactive_sprites/latarnia_off.png" id="3_0fsp4"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="4_iutwu"]
+[ext_resource type="AudioStream" uid="uid://dt7ef0j8qeaar" path="res://audio/win_sound.wav" id="6_iiuoa"]
 
 [node name="Lantern" type="Node2D"]
 script = ExtResource("1_b5ypw")
@@ -33,3 +34,4 @@ offset_bottom = 12.0
 script = ExtResource("4_iutwu")
 
 [node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_iiuoa")

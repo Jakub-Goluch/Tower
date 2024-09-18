@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d30pcl5apfoik"]
+[gd_scene load_steps=7 format=3 uid="uid://cuiqdbtx06x7n"]
 
 [ext_resource type="Texture2D" uid="uid://bhilylcmi1nrv" path="res://assets/interactive_sprites/ts_drzwi-3.png" id="1_iictu"]
 [ext_resource type="Script" path="res://scripts/framed_door.gd" id="1_yf2i3"]
 [ext_resource type="Texture2D" uid="uid://dwf4b337dtypx" path="res://assets/interactive_sprites/ts_drzwi-4.png" id="2_kdx0l"]
+[ext_resource type="Script" path="res://scripts/door_area.gd" id="4_mokq8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_npt3e"]
 animations = [{
@@ -31,15 +32,16 @@ script = ExtResource("1_yf2i3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_npt3e")
-autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="DoorArea" type="Area2D" parent="."]
+script = ExtResource("4_mokq8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
 position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_pd1kl")
 
 [node name="Marker" type="Marker2D" parent="."]
 
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="DoorArea" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="DoorArea" to="." method="_on_area_2d_mouse_exited"]
