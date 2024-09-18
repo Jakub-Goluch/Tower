@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuk7skxps452t"]
+[gd_scene load_steps=8 format=3 uid="uid://cuk7skxps452t"]
 
 [ext_resource type="Script" path="res://scripts/wooden_door.gd" id="1_2fglh"]
 [ext_resource type="Texture2D" uid="uid://bayb1qb2itbim" path="res://assets/doors/ts_girlandy_drzwi (8).png" id="1_04ht5"]
 [ext_resource type="Texture2D" uid="uid://bcfc805lwed6r" path="res://assets/doors/ts_girlandy_drzwi (7).png" id="2_27gvx"]
 [ext_resource type="Texture2D" uid="uid://caoyp8clr4hl5" path="res://assets/doors/ts_girlandy_drzwi (6).png" id="3_hiaye"]
 [ext_resource type="Texture2D" uid="uid://immpdm4ir6ii" path="res://assets/doors/ts_girlandy_drzwi (9).png" id="4_wjtqc"]
-[ext_resource type="Script" path="res://scripts/door_area.gd" id="6_x4swq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_efevc"]
 animations = [{
@@ -33,6 +32,14 @@ animations = [{
 "loop": false,
 "name": &"open",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wjtqc")
+}],
+"loop": true,
+"name": &"open_already",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33gl1"]
@@ -43,13 +50,10 @@ script = ExtResource("1_2fglh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_efevc")
-animation = &"open"
+animation = &"open_already"
 autoplay = "default"
-frame = 3
-frame_progress = 1.0
 
 [node name="DoorArea" type="Area2D" parent="."]
-script = ExtResource("6_x4swq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
 position = Vector2(1.5, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm5jwlypaa7p3"]
+[gd_scene load_steps=4 format=3 uid="uid://b8dobcaxc0ntw"]
 
 [ext_resource type="Script" path="res://scripts/open_iron_door.gd" id="1_l07ka"]
 [ext_resource type="Texture2D" uid="uid://cf1dcv3ieg2ce" path="res://assets/doors/ts_girlandy_drzwi (1).png" id="2_gv418"]

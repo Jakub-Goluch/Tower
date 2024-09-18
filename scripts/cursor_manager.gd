@@ -8,26 +8,15 @@ var flag_cursor_change = false
 var current_cursor
 
 func _ready():
-	# pickup/interactable item
-	$HandCursorArea.connect("change_to_hand", set_hand_cursor)
-	$HandCursorArea.connect("change_to_normal", reset_cursor)
+	pass
 	
-	# book/hint plate
-	$ZoomCursorArea.connect("change_to_zoom", set_zoom_cursor)
-	$ZoomCursorArea.connect("change_to_normal", reset_cursor)
-
-#func _process(delta):
-	#if $HandCursorArea.in_area:
-		#Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
-	#
-	#if !$HandCursorArea.in_area:
-		#Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
-
 func set_hand_cursor():
+	print("setting hand cursor")
 	Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
 	
 func set_zoom_cursor():
 	Input.set_custom_mouse_cursor(zoom_cursor, Input.CURSOR_ARROW, Vector2(8, 8))
 
 func reset_cursor():
+	print("resetting cursor")
 	Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(8, 8))

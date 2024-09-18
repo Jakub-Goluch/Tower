@@ -4,10 +4,12 @@ var left = false
 var right = false
 var anim_played = false # flag
 var count = 0
+@onready var flag_key: Node2D = $FlagKey
 
 func _ready():
 	$FlagsLeft/HBoxContainer.connect("left_solved", mark_left)
 	$FlagsRight/HBoxContainer.connect("right_solved", mark_right)
+	$FlagKey.visible = false
 	
 func _process(delta):
 	if !anim_played && count == 0:
@@ -25,6 +27,7 @@ func mark_right():
 	print("right good")
 
 func win():
+	$FlagKey.visible = true
 	$KingStatue.play("spin")
 	$KnightStatue.play("spin")
 	if !$FlagSolvedAudio.playing:
