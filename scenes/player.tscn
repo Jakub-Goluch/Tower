@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://beq2uf33vus0j"]
+
+[ext_resource type="Texture2D" uid="uid://drbhxfm71y8nu" path="res://assets/interactive_sprites/princess.png" id="1_ku4qm"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_vgo4y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih4yc"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_867dn"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh1jt"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrl1l"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neh37"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5xbb"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv5kt"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2q0ow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih4yc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_867dn")
+}],
+"loop": true,
+"name": &"enter_door",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh1jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrl1l")
+}],
+"loop": true,
+"name": &"exit_door",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_neh37")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5xbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv5kt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3wln"]
+radius = 6.0
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_vgo4y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2q0ow")
+animation = &"walk"
+autoplay = "idle"
+frame_progress = 0.812799
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_l3wln")

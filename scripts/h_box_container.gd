@@ -3,7 +3,7 @@ extends HBoxContainer
 var correct_flag_order
 var btn_slots
 
-var left_solved = false
+signal left_solved 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +12,7 @@ func _ready() -> void:
 	$"3/TextureButton".connect("flags_changed", check_order)
 	$"4/TextureButton".connect("flags_changed", check_order)
 	
-	correct_flag_order = ["res://assets/flag1.png", "res://assets/flag2.png", "res://assets/flag3.png", "res://assets/flag4.png"]
+	correct_flag_order = ["res://assets/interactive_sprites/flag1.png", "res://assets/interactive_sprites/flag2.png", "res://assets/interactive_sprites/flag3.png", "res://assets/interactive_sprites/flag4.png"]
 	
 	btn_slots = Array()
 	btn_slots.append($"1/TextureButton")
@@ -28,5 +28,5 @@ func check_order():
 			return false
 	#print(true)
 	print("***PUZZLE SOLVED - LEFT***")
-	left_solved = true
+	emit_signal("left_solved")
 	return true
