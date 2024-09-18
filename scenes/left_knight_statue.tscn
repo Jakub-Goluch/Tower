@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv272l2mn5tmu"]
+
+[ext_resource type="Texture2D" uid="uid://dkb5560p1ttn7" path="res://assets/interactive_sprites/statue_left.png" id="1_uxslb"]
+
+[node name="LeftKnightStatue" type="Sprite2D"]
+texture = ExtResource("1_uxslb")
