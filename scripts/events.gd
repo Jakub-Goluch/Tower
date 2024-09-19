@@ -16,6 +16,6 @@ signal vase_selected()
 
 signal vase_not_selected()
 
-signal skeleton_selected()
+signal skeleton_selected(path)
 
 signal skeleton_not_selected()

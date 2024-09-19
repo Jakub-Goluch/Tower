@@ -77,7 +77,7 @@ func _process(delta):
 		else:
 			Events.vase_not_selected.emit()
 		if skeleton_selected:
-			Events.skeleton_selected.emit()
+			Events.skeleton_selected.emit(selected_item.get_child(0).texture.resource_path)
 		else:
 			Events.skeleton_not_selected.emit()
 			
