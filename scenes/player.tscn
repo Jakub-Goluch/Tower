@@ -84,11 +84,12 @@ script = ExtResource("1_vgo4y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2q0ow")
-animation = &"walk"
+animation = &"enter_door"
 autoplay = "idle"
 frame = 1
-frame_progress = 0.734074
+frame_progress = 0.0387446
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_l3wln")

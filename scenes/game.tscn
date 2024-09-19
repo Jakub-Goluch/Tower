@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://c1mgnwc8ftc1c"]
+[gd_scene load_steps=59 format=3 uid="uid://c1mgnwc8ftc1c"]
 
 [ext_resource type="Texture2D" uid="uid://cgsknbu8iahdn" path="res://assets/tiles/ts_namioty_wazony.png" id="1_othos"]
 [ext_resource type="Texture2D" uid="uid://dybfgbkk5raps" path="res://assets/tiles/ts_pochodnie_jedzenie.png" id="2_sqyr7"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bgj445opkhce6" path="res://scenes/flags_right.tscn" id="13_nbooo"]
 [ext_resource type="PackedScene" uid="uid://stew2lac85t2" path="res://scenes/inventory.tscn" id="13_vegyk"]
 [ext_resource type="PackedScene" uid="uid://daoirlbxlf0id" path="res://scenes/night_stand.tscn" id="14_m0c5u"]
+[ext_resource type="FontFile" uid="uid://b351cgw4dfieu" path="res://assets/UI/Quirky PC.ttf" id="16_7iike"]
 [ext_resource type="PackedScene" uid="uid://d275k0mv4iabd" path="res://scenes/book_stand.tscn" id="20_m7rrw"]
 [ext_resource type="Texture2D" uid="uid://h1wdyw72y4ha" path="res://assets/background/clouds.png" id="24_p5d0y"]
 [ext_resource type="Texture2D" uid="uid://y2rya23o0isd" path="res://assets/background/sky.png" id="25_wktsv"]
@@ -26061,8 +26062,8 @@ sources/9 = SubResource("TileSetAtlasSource_vg3uu")
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
 z_index = 3
-position = Vector2(56, 63)
-zoom = Vector2(4, 4)
+position = Vector2(87, 65)
+zoom = Vector2(5, 5)
 script = ExtResource("12_btkkc")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -26092,13 +26093,40 @@ position = Vector2(96, 100)
 layer = 0
 
 [node name="Book" parent="BookStand/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
-z_index = 3
-position = Vector2(569, 385)
-scale = Vector2(3, 3)
+position = Vector2(589, 389)
+scale = Vector2(3.4, 3.4)
 script = null
 
+[node name="AnimatedSprite2D" parent="BookStand/BookCanvasLayer/Book" index="0"]
+z_as_relative = false
+
+[node name="CloseBookButton" parent="BookStand/BookCanvasLayer/Book/AnimatedSprite2D/Sprite2D2" index="0"]
+mouse_filter = 0
+
+[node name="FlipButton" parent="BookStand/BookCanvasLayer/Book/AnimatedSprite2D/FlipPage" index="0"]
+mouse_filter = 0
+
+[node name="FlipButtonBack" parent="BookStand/BookCanvasLayer/Book/AnimatedSprite2D/FlipPageBack" index="0"]
+mouse_filter = 0
+
 [node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText" index="0"]
-text = "text of book 1 pt 1"
+offset_left = -117.333
+offset_top = -48.6667
+offset_right = 34.6667
+offset_bottom = -25.6667
+theme_override_colors/font_color = Color(0.42, 0.22834, 0.1092, 1)
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "text of book 
+1 pt 1 write
+something 
+here ahahaha
+
+vksuvbasiv 
+vwbiv wbi
+vwbjhvw bwr
+"
 
 [node name="Label2" parent="BookStand/BookCanvasLayer/Book/BookText" index="1"]
 text = "text of book 1 pt 2"
@@ -26138,6 +26166,7 @@ z_index = 4
 position = Vector2(52, 80)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("13_vegyk")]
 anchors_preset = 7
