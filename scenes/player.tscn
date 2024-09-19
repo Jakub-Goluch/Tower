@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://beq2uf33vus0j"]
 
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_3b8wy"]
 [ext_resource type="Texture2D" uid="uid://drbhxfm71y8nu" path="res://assets/interactive_sprites/princess.png" id="1_ku4qm"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_vgo4y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ih4yc"]
 atlas = ExtResource("1_ku4qm")
@@ -50,8 +50,14 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mrl1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh1jt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrl1l")
 }],
-"loop": true,
+"loop": false,
 "name": &"exit_door",
 "speed": 5.0
 }, {
@@ -80,14 +86,14 @@ radius = 6.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
-script = ExtResource("1_vgo4y")
+script = ExtResource("1_3b8wy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2q0ow")
-animation = &"enter_door"
+animation = &"exit_door"
 autoplay = "idle"
 frame = 1
-frame_progress = 0.0387446
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
