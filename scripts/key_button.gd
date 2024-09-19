@@ -1,5 +1,8 @@
 extends Button
 
+var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
+var normal_cursor = preload("res://assets/cursors/normal_cursor.png")
+
 
 func _ready() -> void:
 	connect("mouse_entered", change_cursor)
