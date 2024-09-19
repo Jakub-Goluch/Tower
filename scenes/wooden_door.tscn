@@ -61,5 +61,7 @@ shape = SubResource("RectangleShape2D_33gl1")
 
 [node name="Marker" type="Marker2D" parent="."]
 
+[node name="CameraMarker" type="Marker2D" parent="."]
+
 [connection signal="mouse_entered" from="DoorArea" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="DoorArea" to="." method="_on_area_2d_mouse_exited"]

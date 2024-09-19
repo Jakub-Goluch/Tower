@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0ueqwjhhl2ny"]
+[gd_scene load_steps=4 format=3 uid="uid://b555rke8viajk"]
 
 [ext_resource type="Texture2D" uid="uid://immpdm4ir6ii" path="res://assets/doors/ts_girlandy_drzwi (9).png" id="1_e1ef0"]
 [ext_resource type="Script" path="res://scripts/open_wooden_door.gd" id="1_hhe83"]
@@ -19,6 +19,8 @@ position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_no7js")
 
 [node name="Marker" type="Marker2D" parent="."]
+
+[node name="CameraMarker" type="Marker2D" parent="."]
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
