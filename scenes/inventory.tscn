@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://stew2lac85t2"]
 
 [ext_resource type="Script" path="res://scripts/inventory.gd" id="1_h10o3"]
-[ext_resource type="PackedScene" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
+[ext_resource type="PackedScene" uid="uid://c1n5avrqf8mde" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
 
 [node name="Inventory" type="HBoxContainer"]
 offset_right = 66.0

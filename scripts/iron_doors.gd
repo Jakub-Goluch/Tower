@@ -37,7 +37,7 @@ func _ready():
 	Events.key_not_selected.connect(func():
 		can_be_open = false
 		)
-	Events.key_used.connect(func():
+	Events.item_used.connect(func():
 		can_be_open = false
 		)
 
@@ -69,6 +69,6 @@ func _process(delta):
 		Input.set_custom_mouse_cursor(go_in_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 		is_open = true
 		animated_sprite.play("open")
-		Events.key_used.emit()
+		Events.item_used.emit()
 		
 	

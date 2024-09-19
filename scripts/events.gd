@@ -8,6 +8,14 @@ signal key_selected()
 
 signal key_not_selected()
 
-signal key_used()
+signal item_used()
 
 signal teleport_position(position)
+
+signal vase_selected()
+
+signal vase_not_selected()
+
+signal skeleton_selected(path)
+
+signal skeleton_not_selected()
