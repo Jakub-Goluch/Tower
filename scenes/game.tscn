@@ -26087,7 +26087,7 @@ size = Vector2(26.9754, 7.6143)
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
 z_index = 3
-position = Vector2(-133, 441)
+position = Vector2(52, -53)
 zoom = Vector2(5, 5)
 script = ExtResource("12_btkkc")
 
@@ -26116,6 +26116,7 @@ position = Vector2(51, -34)
 collision_layer = 2
 
 [node name="BookStand" parent="." instance=ExtResource("20_m7rrw")]
+modulate = Color(1, 1, 1, 0)
 z_index = 2
 position = Vector2(96, 100)
 
@@ -26123,7 +26124,7 @@ position = Vector2(96, 100)
 layer = 0
 
 [node name="Book" parent="BookStand/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
-position = Vector2(583, 384)
+position = Vector2(561, 369)
 scale = Vector2(3.4, 3.4)
 script = null
 
@@ -26140,31 +26141,85 @@ mouse_filter = 0
 mouse_filter = 0
 
 [node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText" index="0"]
-offset_left = -117.333
-offset_top = -48.6667
-offset_right = 34.6667
-offset_bottom = -25.6667
+visible = false
+offset_left = -114.0
+offset_right = -5.0
+offset_bottom = 72.0
 theme_override_colors/font_color = Color(0.42, 0.22834, 0.1092, 1)
 theme_override_constants/line_spacing = 3
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "text of book 
-1 pt 1 write
-something 
-here ahahaha
+text = "March 21st
 
-vksuvbasiv 
-vwbiv wbi
-vwbjhvw bwr
-"
+Today was an eventful day for King 
+Arthur the 
+1st. His Majesty was expecting 
+Henry the 
+3rd to come 
+for a visit."
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText/Label" index="0"]
+offset_left = 122.824
+offset_top = -0.764707
+offset_right = 219.824
+offset_bottom = 89.2353
+theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "Once they sat down, word got around that Charles the 2nd’s kingdom was under attack. "
+autowrap_mode = 2
 
 [node name="Label2" parent="BookStand/BookCanvasLayer/Book/BookText" index="1"]
-text = "text of book 1 pt 2"
+visible = false
+offset_left = -117.0
+offset_top = -51.0
+offset_right = -9.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "Worried about his ally, Henry the 3rd immediately sent his messenger to mobilise his troops in aid for Charles the 2nd."
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText/Label2" index="0"]
+offset_left = 127.0
+offset_top = -0.529413
+offset_right = 215.0
+offset_bottom = 119.471
+theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "March 
+24th 1478:
+
+It seems that King Charles the 2nd’s kingdom has been pillaged and burned down."
+autowrap_mode = 2
 
 [node name="Label3" parent="BookStand/BookCanvasLayer/Book/BookText" index="2"]
-text = "text of book 1 pt 3"
+offset_right = -9.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "Upon hearing the news, King Arthur the 1st seemed unbothered. 
+
+His Majesty’s advisors revealed "
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText/Label3" index="0"]
+offset_left = 121.882
+offset_top = -9.88236
+offset_right = 219.882
+offset_bottom = 47.1176
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "that it 
+was Him who set this attack up."
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Label4" parent="BookStand/BookCanvasLayer/Book/BookText" index="3"]
+visible = false
 text = "text of book 1 pt 4
 "
 
@@ -26576,6 +26631,172 @@ script = ExtResource("48_gbr3o")
 stream = ExtResource("49_hw036")
 volume_db = -7.502
 
+[node name="BookStand2" parent="." instance=ExtResource("20_m7rrw")]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+position = Vector2(319, 245)
+
+[node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand2"]
+
+[node name="Book" parent="BookStand2/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
+position = Vector2(745, 0)
+scale = Vector2(3.4, 3.4)
+
+[node name="Label" parent="BookStand2/BookCanvasLayer/Book/BookText" index="0"]
+offset_right = -13.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "I can never remember the recipe for my special potion! 
+
+So I always have the colours of the ingredients on the table,
+"
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand2/BookCanvasLayer/Book/BookText/Label" index="0"]
+offset_left = 124.647
+offset_top = -1.94117
+offset_right = 224.647
+offset_bottom = 144.059
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "and  I always 
+have the amount I need on the shelves so I never get the portions wrong again.
+"
+autowrap_mode = 2
+
+[node name="Label2" parent="BookStand2/BookCanvasLayer/Book/BookText" index="1"]
+visible = false
+
+[node name="Label3" parent="BookStand2/BookCanvasLayer/Book/BookText" index="2"]
+visible = false
+
+[node name="Label4" parent="BookStand2/BookCanvasLayer/Book/BookText" index="3"]
+visible = false
+
+[node name="BookStand3" parent="." instance=ExtResource("20_m7rrw")]
+
+[node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand3"]
+
+[node name="Book" parent="BookStand3/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
+position = Vector2(1704, -2)
+scale = Vector2(3.4, 3.4)
+
+[node name="Label" parent="BookStand3/BookCanvasLayer/Book/BookText" index="0"]
+offset_left = -114.706
+offset_top = -48.8823
+offset_right = -6.70594
+offset_bottom = 121.118
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "His Majesty’s precious vase has been shattered by a careless fool..."
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand3/BookCanvasLayer/Book/BookText/Label" index="0"]
+offset_left = 124.412
+offset_top = -0.882355
+offset_right = 209.412
+offset_bottom = 106.118
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "Enraged, King Arthur the 1st condemned the fool to public humiliation and sent him to the rack"
+autowrap_mode = 2
+
+[node name="Label2" parent="BookStand3/BookCanvasLayer/Book/BookText" index="1"]
+visible = false
+
+[node name="Label3" parent="BookStand3/BookCanvasLayer/Book/BookText" index="2"]
+visible = false
+
+[node name="Label4" parent="BookStand3/BookCanvasLayer/Book/BookText" index="3"]
+visible = false
+
+[node name="BookStand4" parent="." instance=ExtResource("20_m7rrw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="BookStand4"]
+
+[node name="Book" parent="BookStand4/CanvasLayer" instance=ExtResource("12_m1ddo")]
+position = Vector2(1713, 585)
+scale = Vector2(3.4, 3.4)
+
+[node name="Label" parent="BookStand4/CanvasLayer/Book/BookText" index="0"]
+offset_left = -115.588
+offset_top = -50.6471
+offset_right = -13.5883
+offset_bottom = 71.3529
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "The two knights used to be close and always fought battles together. However things turned sour when they "
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand4/CanvasLayer/Book/BookText/Label" index="0"]
+offset_left = 122.647
+offset_top = 1.47059
+offset_right = 227.647
+offset_bottom = 118.471
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "started fighting to win over the same princess. Now, they both despise each other and wish they stood further apart.
+"
+autowrap_mode = 2
+
+[node name="Label2" parent="BookStand4/CanvasLayer/Book/BookText" index="1"]
+visible = false
+
+[node name="Label3" parent="BookStand4/CanvasLayer/Book/BookText" index="2"]
+visible = false
+
+[node name="Label4" parent="BookStand4/CanvasLayer/Book/BookText" index="3"]
+visible = false
+
+[node name="BookStand5" parent="." instance=ExtResource("20_m7rrw")]
+position = Vector2(-188, 665)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="BookStand5"]
+
+[node name="Book" parent="BookStand5/CanvasLayer" instance=ExtResource("12_m1ddo")]
+position = Vector2(1711, 1173)
+scale = Vector2(3.4, 3.4)
+
+[node name="Label" parent="BookStand5/CanvasLayer/Book/BookText" index="0"]
+offset_left = -112.059
+offset_top = -46.2353
+offset_right = -4.05888
+offset_bottom = 96.7647
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "Poor fool who broke His Majesty’s vase… "
+autowrap_mode = 2
+
+[node name="Label" parent="BookStand5/CanvasLayer/Book/BookText/Label" index="0"]
+offset_left = 122.647
+offset_top = 0.294125
+offset_right = 217.647
+offset_bottom = 107.294
+theme_override_fonts/font = ExtResource("16_7iike")
+theme_override_font_sizes/font_size = 8
+text = "Not only has he gone through humiliation and pain, but his bones are now thrown out around the tower."
+autowrap_mode = 2
+
+[node name="Label2" parent="BookStand5/CanvasLayer/Book/BookText" index="1"]
+visible = false
+text = ""
+
+[node name="Label" parent="BookStand5/CanvasLayer/Book/BookText/Label2" index="0"]
+text = ""
+
+[node name="Label3" parent="BookStand5/CanvasLayer/Book/BookText" index="2"]
+text = ""
+
+[node name="Label" parent="BookStand5/CanvasLayer/Book/BookText/Label3" index="0"]
+text = ""
+
+[node name="Label4" parent="BookStand5/CanvasLayer/Book/BookText" index="3"]
+text = ""
+
+[node name="Label" parent="BookStand5/CanvasLayer/Book/BookText/Label4" index="0"]
+text = ""
+
 [editable path="BookStand/BookCanvasLayer/Book"]
 [editable path="BookStand/BookCanvasLayer/Book/BookText"]
 [editable path="Doors/Door1_IN"]
@@ -26590,3 +26811,11 @@ volume_db = -7.502
 [editable path="Doors/Door6_IN"]
 [editable path="Doors/Door6_OUT"]
 [editable path="Doors/Door7_OUT"]
+[editable path="BookStand2/BookCanvasLayer/Book"]
+[editable path="BookStand2/BookCanvasLayer/Book/BookText"]
+[editable path="BookStand3/BookCanvasLayer/Book"]
+[editable path="BookStand3/BookCanvasLayer/Book/BookText"]
+[editable path="BookStand4/CanvasLayer/Book"]
+[editable path="BookStand4/CanvasLayer/Book/BookText"]
+[editable path="BookStand5/CanvasLayer/Book"]
+[editable path="BookStand5/CanvasLayer/Book/BookText"]

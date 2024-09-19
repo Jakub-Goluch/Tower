@@ -70,4 +70,3 @@ func _process(delta):
 		is_open = true
 		animated_sprite.play("open")
 		Events.item_used.emit()
-
