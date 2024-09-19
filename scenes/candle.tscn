@@ -16,6 +16,7 @@ texture = ExtResource("2_im5y7")
 position = Vector2(1, -8)
 color = Color(0.709804, 0.501961, 0, 1)
 energy = 2.0
+shadow_enabled = true
 texture = ExtResource("2_uly1s")
 texture_scale = 0.7
 
