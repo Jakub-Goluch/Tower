@@ -4,6 +4,7 @@ var mouse_on = false
 var can_be_fix = false
 var is_fixed = false
 var added_pieces = 0
+@onready var sprite = $Sprite2D
 
 func _on_area_2d_mouse_entered():
 	mouse_on = true
@@ -33,6 +34,7 @@ func _process(delta):
 		if added_pieces == 4:
 			is_fixed = true
 			print("vase fixed")
+			sprite.texture = load("res://assets/interactive_sprites/fixed_vase.png")
 		
 		
 		
