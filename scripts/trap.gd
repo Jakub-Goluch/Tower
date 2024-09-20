@@ -9,10 +9,13 @@ var is_open = false
 @onready var camera_marker: Marker2D = $CameraMarker
 @onready var camera: Camera2D = %Camera2D
 @onready var animated_sprite_player: AnimatedSprite2D = %Player/AnimatedSprite2D
+@onready var door_sound: AudioStreamPlayer2D = $DoorSound
+@onready var locked_sound: AudioStreamPlayer2D = $LockedSound
+
 
 var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
 var normal_cursor = preload("res://assets/cursors/normal_cursor.png")
-var go_in_cursor = preload("res://assets/cursors/enter_door_cursor.png")
+var go_in_cursor = preload("res://assets/cursors/enter_trap_cursor.png")
 
 
 func _on_area_2d_mouse_entered():
@@ -70,7 +73,9 @@ func _process(delta):
 		Input.set_custom_mouse_cursor(go_in_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 		is_open = true
 		animated_sprite.play("open")
+		door_sound.play()
 		Events.item_used.emit()
 		
-
+	if Input.is_action_just_pressed("mouse_click") and !is_open and !can_be_open and mouse_on:
+		locked_sound.play()
 		

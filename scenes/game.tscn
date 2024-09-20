@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://c1mgnwc8ftc1c"]
+[gd_scene load_steps=95 format=3 uid="uid://c1mgnwc8ftc1c"]
 
 [ext_resource type="PackedScene" uid="uid://beq2uf33vus0j" path="res://scenes/player.tscn" id="1_7qbbi"]
 [ext_resource type="Texture2D" uid="uid://cgsknbu8iahdn" path="res://assets/tiles/ts_namioty_wazony.png" id="1_othos"]
@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://cp6afrfa3moj1" path="res://assets/UI/text_background.png" id="64_gian8"]
 [ext_resource type="Script" path="res://scripts/cut_scene.gd" id="64_sd1d2"]
 [ext_resource type="PackedScene" uid="uid://3niubdxxgnbm" path="res://scenes/knight_hero.tscn" id="66_8glbg"]
+[ext_resource type="AudioStream" uid="uid://cky5lt2ywuomk" path="res://audio/end_sound.wav" id="67_73gxm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j4su"]
 texture = ExtResource("1_othos")
@@ -27778,6 +27779,9 @@ offset_bottom = 357.0
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 80
 text = "THE END"
+
+[node name="ClosingMusic" type="AudioStreamPlayer2D" parent="CutScene/CutScenePlayer"]
+stream = ExtResource("67_73gxm")
 
 [node name="Sky" type="Sprite2D" parent="."]
 position = Vector2(955.5, 582)
