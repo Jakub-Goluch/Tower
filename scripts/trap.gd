@@ -47,18 +47,23 @@ func _process(delta):
 		
 		animated_sprite_player.scale = Vector2(0.4, 0.4)
 		
-		Events.teleport_position.emit(marker.global_position)
-		## test for separate camera teleportation
-		camera.position = camera_marker.global_position
-		## test code for player teleportation
-		player.position = marker.global_position
-		
-		# play exit door animation
-		animated_sprite_player.play("exit_door")
-		for i in range(0, 6):
-			animated_sprite_player.scale += Vector2(0.1, 0.1)
-			await get_tree().create_timer(0.1).timeout
-		
+		# THE END OF THE GAME
+		if name == "Door_WIN":
+			%CutScene/CutScenePlayer.play("cutscene2")
+			%CutScene.closing_scene()
+		else:
+			Events.teleport_position.emit(marker.global_position)
+			## test for separate camera teleportation
+			camera.position = camera_marker.global_position
+			## test code for player teleportation
+			player.position = marker.global_position
+			
+			# play exit door animation
+			animated_sprite_player.play("exit_door")
+			for i in range(0, 6):
+				animated_sprite_player.scale += Vector2(0.1, 0.1)
+				await get_tree().create_timer(0.1).timeout
+			
 
 	
 	if Input.is_action_just_pressed("mouse_click") and can_be_open and !is_open and mouse_on:

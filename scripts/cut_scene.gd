@@ -4,9 +4,9 @@ extends Node2D
 
 
 func _ready():
-	#move_player()
-	#cry_player()
-	closing_scene()
+	move_player()
+	cry_player()
+
 	
 func move_player():
 	animated_sprite.play("wait")
