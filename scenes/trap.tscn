@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://rgr6ainghqcx"]
+[gd_scene load_steps=8 format=3 uid="uid://bjsca681lpckv"]
 
 [ext_resource type="Script" path="res://scripts/trap.gd" id="1_v7o6q"]
 [ext_resource type="Texture2D" uid="uid://d3d64nxvdpj" path="res://assets/interactive_sprites/ts_girlandy_drzwi-3.png" id="2_gcqyx"]
@@ -52,6 +52,8 @@ position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_q67a8")
 
 [node name="Marker" type="Marker2D" parent="."]
+
+[node name="CameraMarker" type="Marker2D" parent="."]
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
