@@ -9,8 +9,8 @@ var old_position: Vector2
 
 func _ready():
 	connect("body_entered", move_camera)
-	right_position = Vector2(383.0 , 220.0) # elixir office
-	left_position = Vector2(137.0, 192.0) # main bedroom
+	right_position = Vector2(386.0 , 220.0) # elixir office
+	left_position = Vector2(147.0, 196.0) # main bedroom
 	
 func move_camera(body):
 	print("player entered area!")

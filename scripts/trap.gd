@@ -62,6 +62,7 @@ func _process(delta):
 
 	
 	if Input.is_action_just_pressed("mouse_click") and can_be_open and !is_open and mouse_on:
+		Input.set_custom_mouse_cursor(go_in_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 		is_open = true
 		animated_sprite.play("open")
 		Events.item_used.emit()
