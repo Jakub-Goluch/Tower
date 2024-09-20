@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cix83o8ydgvi0"]
 
 [ext_resource type="Script" path="res://scripts/coffin.gd" id="1_jjtt1"]
-[ext_resource type="Texture2D" uid="uid://dgwilpidllc1n" path="res://assets/interactive_sprites/coffin.png" id="2_lxegk"]
+[ext_resource type="Texture2D" uid="uid://cs3ocdtgh0kbl" path="res://assets/interactive_sprites/coffin.png" id="2_lxegk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_375bq"]
 size = Vector2(45, 22)

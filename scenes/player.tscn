@@ -23,13 +23,13 @@ region = Rect2(16, 32, 16, 16)
 atlas = ExtResource("1_ku4qm")
 region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l5xbb"]
-atlas = ExtResource("1_ku4qm")
-region = Rect2(32, 32, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_dv5kt"]
 atlas = ExtResource("1_ku4qm")
 region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5xbb"]
+atlas = ExtResource("1_ku4qm")
+region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2q0ow"]
 animations = [{
@@ -71,6 +71,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_dv5kt")
+}],
+"loop": true,
+"name": &"wait",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_l5xbb")
 }, {
 "duration": 1.0,
@@ -90,10 +98,8 @@ script = ExtResource("1_3b8wy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2q0ow")
-animation = &"exit_door"
+animation = &"wait"
 autoplay = "idle"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

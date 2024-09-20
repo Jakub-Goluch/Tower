@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biaxoh1bu4n1e"
-path="res://.godot/imported/coffin_skeleton.png-3542b2e753ae28642349c3fe16e52a38.ctex"
+uid="uid://dy0sayip8kq26"
+path="res://.godot/imported/knight_character.png-77610074ca7d5caa486983645e5fec48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactive_sprites/coffin_skeleton.png"
-dest_files=["res://.godot/imported/coffin_skeleton.png-3542b2e753ae28642349c3fe16e52a38.ctex"]
+source_file="res://assets/interactive_sprites/knight_character.png"
+dest_files=["res://.godot/imported/knight_character.png-77610074ca7d5caa486983645e5fec48.ctex"]
 
 [params]
 
