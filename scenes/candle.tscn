@@ -33,3 +33,4 @@ zoom = Vector2(7, 7)
 
 [node name="WinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_q47is")
+volume_db = -3.0

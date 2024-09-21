@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c25uso0kyj546"]
+[gd_scene load_steps=5 format=3 uid="uid://cix83o8ydgvi0"]
 
 [ext_resource type="Script" path="res://scripts/coffin.gd" id="1_jjtt1"]
-[ext_resource type="Texture2D" uid="uid://dgwilpidllc1n" path="res://assets/interactive_sprites/coffin.png" id="2_lxegk"]
+[ext_resource type="Texture2D" uid="uid://cs3ocdtgh0kbl" path="res://assets/interactive_sprites/coffin.png" id="2_lxegk"]
+[ext_resource type="AudioStream" uid="uid://dfp3yufmai3kc" path="res://audio/win_skeleton.mp3" id="3_hewdn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_375bq"]
 size = Vector2(45, 22)
@@ -17,6 +18,9 @@ texture = ExtResource("2_lxegk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_375bq")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hewdn")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

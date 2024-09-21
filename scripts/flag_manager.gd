@@ -5,6 +5,7 @@ var right = false
 var anim_played = false # flag
 var count = 0
 @onready var flag_key: Node2D = $FlagKey
+@onready var main_music: AudioStreamPlayer2D = %MainMusic
 
 func _ready():
 	$FlagsLeft/HBoxContainer.connect("left_solved", mark_left)
@@ -32,7 +33,9 @@ func win():
 	$KnightStatue.play("spin")
 	if !$FlagSolvedAudio.playing:
 		$FlagSolvedAudio.play()
+		main_music.volume_db -= 5
 	await get_tree().create_timer(8.0).timeout
 	#$KingStatue.stop()
 	#$KnightStatue.stop()
 	$FlagSolvedAudio.stop()
+	main_music.volume_db += 5

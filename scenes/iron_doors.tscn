@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7fp1cnp0leml"]
+[gd_scene load_steps=10 format=3 uid="uid://b7fp1cnp0leml"]
 
 [ext_resource type="Texture2D" uid="uid://by83eaf68wskg" path="res://assets/doors/ts_girlandy_drzwi (4).png" id="1_1l58y"]
 [ext_resource type="Script" path="res://scripts/iron_doors.gd" id="1_pefts"]
 [ext_resource type="Texture2D" uid="uid://emd2i3iocf0p" path="res://assets/doors/ts_girlandy_drzwi (3).png" id="2_lukvi"]
 [ext_resource type="Texture2D" uid="uid://ct6yj1uujpp8w" path="res://assets/doors/ts_girlandy_drzwi (2).png" id="3_d06f0"]
 [ext_resource type="Texture2D" uid="uid://cf1dcv3ieg2ce" path="res://assets/doors/ts_girlandy_drzwi (1).png" id="4_pmy82"]
+[ext_resource type="AudioStream" uid="uid://dmsu3y2akaf8x" path="res://audio/352716__dalesome__squeaky-bathroom-door.wav" id="6_nqjpd"]
+[ext_resource type="AudioStream" uid="uid://dgr4ghmkev824" path="res://audio/12740__leady__locked-door2.wav" id="7_jrv0p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t7mad"]
 animations = [{
@@ -63,6 +65,13 @@ shape = SubResource("RectangleShape2D_p32hj")
 [node name="Marker" type="Marker2D" parent="."]
 
 [node name="CameraMarker" type="Marker2D" parent="."]
+
+[node name="DoorSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_nqjpd")
+
+[node name="LockedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_jrv0p")
+volume_db = -10.0
 
 [connection signal="mouse_entered" from="DoorArea" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="DoorArea" to="." method="_on_area_2d_mouse_exited"]

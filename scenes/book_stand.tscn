@@ -6,7 +6,7 @@
 script = ExtResource("2_0k24h")
 
 [node name="StandButton" type="Button" parent="."]
-modulate = Color(1, 0.12, 0.12, 1)
+modulate = Color(1, 0.12, 0.12, 0)
 offset_left = -8.0
 offset_top = -8.0
 offset_right = 9.0

@@ -7,6 +7,7 @@ var has_a_key = false
 var key_selected = false
 var vase_selected = false
 var skeleton_selected = false
+@onready var pick_up_sound: AudioStreamPlayer2D = $PickUpSound
 
 
 func remove_sprite(name: String) -> void:
@@ -20,13 +21,16 @@ func remove_sprite(name: String) -> void:
 func add_sprite(item: Node2D) -> void:
 	for child in inventory.get_children():
 		if child.get_child(0).texture == null:
+			
+			pick_up_sound.play()
+			
 			child.item = item
 			child.get_child(0).texture = item.get_child(0).texture
 			if child.get_child(0).texture.resource_path != "res://assets/pickup_items/key_gold.png":
 				if child.get_child(0).texture.resource_path != "res://assets/pickup_items/trup3.png":
 					child.get_child(0).position = Vector2(4,2)
 				else:
-					child.get_child(0).position += Vector2(2,2)
+					child.get_child(0).position -= Vector2(2,1)
 			else:
 				child.get_child(0).position = Vector2(1,-2)
 			break 
