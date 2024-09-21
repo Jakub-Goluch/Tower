@@ -21,4 +21,3 @@ func move_camera(body):
 		camera.position = right_position
 	elif(counter%2==0): # entering from right so move to left
 		camera.position = left_position
-	

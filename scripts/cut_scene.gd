@@ -2,6 +2,7 @@ extends Node2D
 @onready var animated_sprite: AnimatedSprite2D = $CutScenePlayer/Player/AnimatedSprite2D
 @onready var animated_sprite_hero: AnimatedSprite2D = $CutScenePlayer/KnightHero/AnimatedSprite2D
 @onready var closing_music: AudioStreamPlayer2D = $CutScenePlayer/ClosingMusic
+@onready var main_music: AudioStreamPlayer2D = %MainMusic
 
 
 func _ready():
@@ -23,6 +24,7 @@ func cry_player():
 
 func closing_scene():
 	closing_music.play()
+	main_music.stop()
 	animated_sprite.flip_h = true
 	animated_sprite_hero.flip_h = true
 	animated_sprite.play("walk")

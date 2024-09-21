@@ -23,9 +23,9 @@ func move_to_dragon():
 	main_music.stream_paused = true
 	dragon_sound.play()
 	
-	camera.position.x = -672
-	camera.position.y = 459
-	camera.zoom -= Vector2(0.5, 0.5)
+	camera.position.x = -698
+	camera.position.y = 450
+	camera.zoom = Vector2(3.7, 3.7)
 	
 	await get_tree().create_timer(8).timeout
 	
@@ -34,7 +34,7 @@ func move_to_dragon():
 	
 	camera.position.x = prev_pos_x
 	camera.position.y = prev_pos_y
-	camera.zoom += Vector2(0.5, 0.5)
+	camera.zoom = Vector2(4.7, 4.7)
 
 func change_cursor():
 	Input.set_custom_mouse_cursor(hand_cursor, Input.CURSOR_ARROW, Vector2(6, 7))

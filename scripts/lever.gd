@@ -1,4 +1,5 @@
 extends Node2D
+@onready var statue_sound: AudioStreamPlayer2D = $StatueSound
 
 
 func _ready() -> void:
@@ -11,6 +12,7 @@ func _ready() -> void:
 		
 func start_animation():
 	$AnimatedSprite2D.play("switch")
+	statue_sound.play()
 	await get_tree().create_timer(1.0).timeout
 	$Statue.position.x -= 22.0
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://clvldxsuknmrh"]
+[gd_scene load_steps=45 format=3 uid="uid://clvldxsuknmrh"]
 
 [ext_resource type="Script" path="res://scripts/book.gd" id="1_5bxu7"]
 [ext_resource type="Texture2D" uid="uid://bxbiwnnh4j82i" path="res://assets/book_animation/Book1.png" id="2_ynolr"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://scripts/flip_button.gd" id="22_sgqmw"]
 [ext_resource type="PackedScene" uid="uid://03ma7twrr72w" path="res://scenes/book_text.tscn" id="23_otyuk"]
 [ext_resource type="Script" path="res://scripts/flip_button_back.gd" id="23_u4bgh"]
+[ext_resource type="AudioStream" uid="uid://bkmu8a5645bya" path="res://audio/page_flip.wav" id="24_jndgm"]
 [ext_resource type="Script" path="res://scripts/book_text.gd" id="24_sueky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cefn8"]
@@ -215,6 +216,10 @@ offset_right = 8.0
 offset_bottom = 24.0
 mouse_filter = 1
 script = ExtResource("23_u4bgh")
+
+[node name="FlipPageSound" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
+stream = ExtResource("24_jndgm")
+volume_db = -2.0
 
 [node name="BookText" parent="." instance=ExtResource("23_otyuk")]
 position = Vector2(10, -32)

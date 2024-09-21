@@ -11,6 +11,7 @@
 script = ExtResource("1_b5ypw")
 
 [node name="Aura" type="PointLight2D" parent="."]
+z_index = -1
 position = Vector2(0, 5)
 color = Color(0.71168, 0.501253, 1.92523e-07, 1)
 energy = 1.5

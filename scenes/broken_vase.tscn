@@ -21,6 +21,7 @@ shape = SubResource("RectangleShape2D_x8m31")
 
 [node name="WinSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_3g43b")
+volume_db = 5.0
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

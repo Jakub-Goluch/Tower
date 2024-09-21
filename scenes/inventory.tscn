@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://stew2lac85t2"]
+[gd_scene load_steps=4 format=3 uid="uid://stew2lac85t2"]
 
 [ext_resource type="Script" path="res://scripts/inventory.gd" id="1_h10o3"]
-[ext_resource type="PackedScene" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
+[ext_resource type="PackedScene" uid="uid://bigoww8lqk6kk" path="res://scenes/inventoryItem.tscn" id="1_tcxl8"]
+[ext_resource type="AudioStream" uid="uid://caicdli3fyekg" path="res://audio/pickup_sound.wav" id="3_52jai"]
 
 [node name="Inventory" type="HBoxContainer"]
 offset_right = 66.0
@@ -21,3 +22,6 @@ layout_mode = 2
 
 [node name="InventoryItem4" parent="." instance=ExtResource("1_tcxl8")]
 layout_mode = 2
+
+[node name="PickUpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_52jai")

@@ -8,6 +8,8 @@ var sprite_path = null
 @onready var sprite = $Sprite2D
 @onready var skeleton_label: Label = %SkeletonLabel
 @onready var basement_key: Node2D = $BasementKey
+@onready var win_sound: AudioStreamPlayer2D = $WinSound
+@onready var main_music: AudioStreamPlayer2D = %MainMusic
 
 var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
 var normal_cursor = preload("res://assets/cursors/normal_cursor.png")
@@ -57,7 +59,10 @@ func _process(delta):
 			is_fixed = true
 			print("coffin fixed")
 			sprite.texture = load("res://assets/interactive_sprites/coffin_skeleton.png")
-		
+			win_sound.play()
+			main_music.volume_db -= 5
+			await get_tree().create_timer(8.59).timeout
+			main_music.volume_db += 5
 		
 		
 	
