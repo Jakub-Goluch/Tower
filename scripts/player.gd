@@ -27,11 +27,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"):
 		animated_sprite.flip_h = false
 		animated_sprite.play("walk")
-		walking_sound.play()
+		if !walking_sound.playing:
+			walking_sound.play()
 	elif Input.is_action_pressed("move_right"):
 		animated_sprite.flip_h = true
 		animated_sprite.play("walk")
-		walking_sound.play()
+		if !walking_sound.playing:
+			walking_sound.play()
 	elif Input.is_action_just_released("move_left") || Input.is_action_just_released("move_right"):
 		animated_sprite.flip_h = false
 		animated_sprite.play("idle")
