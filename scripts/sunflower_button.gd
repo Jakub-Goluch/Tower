@@ -4,6 +4,7 @@ var destroyed = false
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var sprite2: Sprite2D = $Sprite2D2
 @onready var lever_left: Node2D = $LeverLeft
+var mouse_on = false
 
 
 var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
@@ -17,6 +18,10 @@ func _ready():
 	
 	$SunflowerButton.connect("mouse_entered", change_cursor)
 	$SunflowerButton.connect("mouse_exited", reset_cursor)
+
+func _process(delta):
+	if Input.is_action_just_pressed("left_mouse") and mouse_on:
+		destroy_sunflower()
 
 func destroy_sunflower():
 	if !destroyed:
@@ -33,3 +38,12 @@ func change_cursor():
 func reset_cursor():
 	Input.set_custom_mouse_cursor(normal_cursor, Input.CURSOR_ARROW, Vector2(6, 7))
 		
+
+
+
+func _on_area_2d_mouse_entered():
+	mouse_on = true
+
+
+func _on_area_2d_mouse_exited():
+	mouse_on = false
