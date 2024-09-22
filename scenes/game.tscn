@@ -27554,7 +27554,7 @@ offset_bottom = 62.2353
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "Poor fool who broke His Majesty's vase… "
+text = "Poor fool who broke His Majesty's vase..."
 autowrap_mode = 2
 
 [node name="Label" parent="BookStand5/BookCanvasLayer/Book/BookText/Label" index="0"]
