@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://n0c43v1sdeua"]
+[gd_scene load_steps=5 format=3 uid="uid://n0c43v1sdeua"]
 
 [ext_resource type="Texture2D" uid="uid://dwmhubb4t8dlu" path="res://assets/interactive_sprites/sunflower.png" id="1_mxxlv"]
 [ext_resource type="Script" path="res://scripts/sunflower_button.gd" id="1_sg7pb"]
 [ext_resource type="Texture2D" uid="uid://xsf8wrac5emt" path="res://assets/interactive_sprites/sunflower 2.png" id="2_f6l7y"]
+[ext_resource type="AudioStream" uid="uid://bguq6ela7brmt" path="res://audio/sunflower_sound.mp3" id="4_cnjh4"]
 
 [node name="Sunflower" type="Node2D"]
 script = ExtResource("1_sg7pb")
@@ -20,3 +21,6 @@ offset_left = -10.0
 offset_top = -8.0
 offset_right = 10.0
 offset_bottom = 18.0
+
+[node name="BreakSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cnjh4")

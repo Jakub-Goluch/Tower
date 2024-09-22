@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://1rq0icnlhyic"]
+[gd_scene load_steps=7 format=3 uid="uid://1rq0icnlhyic"]
 
 [ext_resource type="Script" path="res://scenes/options.gd" id="1_22aw6"]
 [ext_resource type="Texture2D" uid="uid://cp6afrfa3moj1" path="res://assets/UI/text_background.png" id="1_ijt1r"]
 [ext_resource type="FontFile" uid="uid://b351cgw4dfieu" path="res://assets/UI/Quirky PC.ttf" id="2_gkjic"]
+[ext_resource type="Texture2D" uid="uid://odgg7my7vrw5" path="res://assets/UI/GUI-5.png" id="4_br0hw"]
+[ext_resource type="Texture2D" uid="uid://cektoddcrfq03" path="res://assets/UI/GUI-5 2.png" id="5_5bcsx"]
+[ext_resource type="Texture2D" uid="uid://bytmkoet5to54" path="res://assets/UI/GUI-5 1.png" id="6_8d8fo"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -21,16 +24,15 @@ texture = ExtResource("1_ijt1r")
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 108.0
-offset_top = 346.0
+offset_top = 354.0
 offset_right = 1004.0
-offset_bottom = 529.0
+offset_bottom = 542.0
+theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("2_gkjic")
 theme_override_font_sizes/font_size = 32
 text = "GAME WORLD INTERACTIONS
 
-
 click left mouse to interact
-
 with objects"
 
 [node name="Label" type="Label" parent="."]
@@ -39,19 +41,32 @@ offset_left = 113.0
 offset_top = 97.0
 offset_right = 1073.0
 offset_bottom = 249.0
+theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("2_gkjic")
 theme_override_font_sizes/font_size = 32
 text = "PLAYER MOVEMENT
 
-press a and d / left arrow and 
+press a / d  OR left / right 
+arrow to move"
 
-right arrow to move"
-
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 980.0
-offset_top = 566.0
-offset_right = 1107.0
-offset_bottom = 635.0
+offset_left = 899.0
+offset_top = 513.0
+offset_right = 1113.0
+offset_bottom = 616.0
 action_mode = 0
-text = "Go back"
+texture_normal = ExtResource("4_br0hw")
+texture_pressed = ExtResource("5_5bcsx")
+texture_hover = ExtResource("6_8d8fo")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 36.0
+offset_right = 195.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("2_gkjic")
+theme_override_font_sizes/font_size = 24
+text = "go back"

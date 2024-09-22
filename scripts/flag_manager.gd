@@ -8,24 +8,25 @@ var count = 0
 @onready var main_music: AudioStreamPlayer2D = %MainMusic
 
 func _ready():
-	$FlagsLeft/HBoxContainer.connect("left_solved", mark_left)
-	$FlagsRight/HBoxContainer.connect("right_solved", mark_right)
+	#$FlagsLeft/HBoxContainer.connect("left_solved", mark_left)
+	#$FlagsRight/HBoxContainer.connect("right_solved", mark_right)
 	$FlagKey.visible = false
 	
 func _process(delta):
 	if !anim_played && count == 0:
-		if left && right:
+		#if left && right:
+		if $FlagsLeft/HBoxContainer.flags_solved && $FlagsRight/HBoxContainer.flags_solved:
 			count += 1
-			anim_played = false
+			anim_played = true
 			win()
 	
-func mark_left():
-	left = true
-	print("left good")
-	
-func mark_right():
-	right = true
-	print("right good")
+#func mark_left():
+	#left = true
+	#print("left good")
+	#
+#func mark_right():
+	#right = true
+	#print("right good")
 
 func win():
 	$FlagKey.visible = true
