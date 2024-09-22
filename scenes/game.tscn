@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://c1mgnwc8ftc1c"]
+[gd_scene load_steps=102 format=3 uid="uid://c1mgnwc8ftc1c"]
 
 [ext_resource type="PackedScene" uid="uid://beq2uf33vus0j" path="res://scenes/player.tscn" id="1_7qbbi"]
 [ext_resource type="Texture2D" uid="uid://cgsknbu8iahdn" path="res://assets/tiles/ts_namioty_wazony.png" id="1_othos"]
@@ -54,8 +54,10 @@
 [ext_resource type="Script" path="res://scripts/dragon_button.gd" id="48_gbr3o"]
 [ext_resource type="AudioStream" uid="uid://bcwvnxdfaed4u" path="res://audio/568904__badoink__lo-fi-danger.wav" id="49_hw036"]
 [ext_resource type="Script" path="res://scripts/camera_change_area.gd" id="50_bt1wv"]
+[ext_resource type="Script" path="res://scripts/camera_change_area_left.gd" id="53_hkcra"]
 [ext_resource type="PackedScene" uid="uid://bdoedn0sdvsf8" path="res://scenes/broken_vase.tscn" id="54_d0oii"]
 [ext_resource type="PackedScene" uid="uid://c8nmbb5r5m0qb" path="res://scenes/vase_element_3.tscn" id="55_u1n6j"]
+[ext_resource type="Script" path="res://scripts/camera_change_main_hall_left.gd" id="55_w4g4f"]
 [ext_resource type="PackedScene" uid="uid://dimtyes8bf26l" path="res://scenes/vase_element_4.tscn" id="56_lopaa"]
 [ext_resource type="PackedScene" uid="uid://cmwi535lxv0mi" path="res://scenes/skeleton_head.tscn" id="57_lxpfg"]
 [ext_resource type="PackedScene" uid="uid://bge30gvlvuc2o" path="res://scenes/skeleton_body.tscn" id="58_1kot7"]
@@ -66,6 +68,7 @@
 [ext_resource type="PackedScene" uid="uid://n0c43v1sdeua" path="res://scenes/sunflower.tscn" id="63_0mdde"]
 [ext_resource type="Texture2D" uid="uid://cp6afrfa3moj1" path="res://assets/UI/text_background.png" id="64_gian8"]
 [ext_resource type="Script" path="res://scripts/cut_scene.gd" id="64_sd1d2"]
+[ext_resource type="Script" path="res://scripts/camera_change_basement_left.gd" id="65_rycf8"]
 [ext_resource type="PackedScene" uid="uid://3niubdxxgnbm" path="res://scenes/knight_hero.tscn" id="66_8glbg"]
 [ext_resource type="AudioStream" uid="uid://cky5lt2ywuomk" path="res://audio/end_sound.wav" id="67_73gxm"]
 
@@ -26113,23 +26116,35 @@ size = Vector2(70.7212, 6.85486)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7f1h"]
 size = Vector2(17.8563, 4.79752)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fj5cy"]
+a = Vector2(13, 34)
+b = Vector2(13, 67)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tk1ju"]
-a = Vector2(264, 194)
-b = Vector2(264, 154)
+a = Vector2(264, 182)
+b = Vector2(264, 150)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8a8qd"]
+a = Vector2(3, 30)
+b = Vector2(3, 8)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1x1ku"]
-a = Vector2(-56, 439)
-b = Vector2(-56, 472)
+a = Vector2(-40, 463)
+b = Vector2(-40, 488)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1q78f"]
+a = Vector2(0, -20)
+b = Vector2(0, 12)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lthbd"]
-a = Vector2(0, -7)
+a = Vector2(0, 16)
 b = Vector2(0, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ktqk"]
 size = Vector2(311, 119)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4sle"]
-size = Vector2(357, 111)
+size = Vector2(346, 111)
 
 [sub_resource type="Animation" id="Animation_uox85"]
 resource_name = "cutscene1"
@@ -26769,7 +26784,7 @@ autoplay = true
 [node name="Player" parent="." instance=ExtResource("1_7qbbi")]
 unique_name_in_owner = true
 z_index = 7
-position = Vector2(27, -17)
+position = Vector2(23, -22)
 collision_layer = 2
 
 [node name="LanternManager" type="Node" parent="."]
@@ -26887,7 +26902,7 @@ z_index = -1
 position = Vector2(-65, 81)
 
 [node name="EmptyDoor3" parent="EmptyDoorContainer" instance=ExtResource("42_thyqj")]
-position = Vector2(40, 225)
+position = Vector2(45, 225)
 
 [node name="EmptyDoor4" parent="EmptyDoorContainer" instance=ExtResource("42_thyqj")]
 position = Vector2(344, 353)
@@ -26938,13 +26953,13 @@ position = Vector2(-92, -142)
 position = Vector2(-67, 80)
 
 [node name="Marker" parent="Doors/Door2_IN" index="2"]
-position = Vector2(106, 146)
+position = Vector2(110, 146)
 
 [node name="CameraMarker" parent="Doors/Door2_IN" index="3"]
-position = Vector2(214, 116)
+position = Vector2(221, 116)
 
 [node name="Door2_OUT" parent="Doors" instance=ExtResource("30_vx3oy")]
-position = Vector2(38, 225)
+position = Vector2(43, 225)
 
 [node name="Marker" parent="Doors/Door2_OUT" index="2"]
 position = Vector2(-104, -144)
@@ -26971,7 +26986,7 @@ position = Vector2(342, 352)
 position = Vector2(-95, -129)
 
 [node name="CameraMarker" parent="Doors/Door3_OUT" index="3"]
-position = Vector2(-195, -156)
+position = Vector2(-188, -156)
 
 [node name="Door4_IN" parent="Doors" instance=ExtResource("36_4woxd")]
 position = Vector2(313, 364)
@@ -27244,7 +27259,6 @@ position = Vector2(96, 100)
 
 [node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand"]
 layer = 0
-visible = false
 
 [node name="Book" parent="BookStand/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
 position = Vector2(562, 388)
@@ -27273,7 +27287,7 @@ theme_override_colors/font_color = Color(0.42, 0.22834, 0.1092, 1)
 theme_override_constants/line_spacing = 3
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "March 21st
+text = "May 9th
 
 Today was an eventful day for King 
 Arthur the 
@@ -27365,7 +27379,6 @@ position = Vector2(562, 388)
 scale = Vector2(3.4, 3.4)
 
 [node name="Label" parent="BookStand2/BookCanvasLayer/Book/BookText" index="0"]
-visible = false
 offset_right = -13.0
 offset_bottom = 68.0
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
@@ -27528,6 +27541,7 @@ text = ""
 position = Vector2(-200, 564)
 
 [node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand5"]
+visible = false
 
 [node name="Book" parent="BookStand5/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
 position = Vector2(561, 369)
@@ -27577,6 +27591,7 @@ text = ""
 position = Vector2(-9, 356)
 
 [node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand6"]
+visible = false
 
 [node name="Book" parent="BookStand6/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
 position = Vector2(561, 369)
@@ -27660,14 +27675,31 @@ theme_override_font_sizes/font_size = 8
 text = ""
 autowrap_mode = 2
 
-[node name="CameraChangeArea" type="Area2D" parent="."]
+[node name="CameraChangeAreaLeft" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("53_hkcra")
+
+[node name="CollisionLeft" type="CollisionShape2D" parent="CameraChangeAreaLeft"]
+z_index = 3
+position = Vector2(248, 175)
+shape = SubResource("SegmentShape2D_fj5cy")
+
+[node name="CameraChangeAreaRight" type="Area2D" parent="."]
 collision_mask = 2
 script = ExtResource("50_bt1wv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraChangeArea"]
+[node name="CollisionRight" type="CollisionShape2D" parent="CameraChangeAreaRight"]
 z_index = 2
-position = Vector2(1, 45)
+position = Vector2(16, 76)
 shape = SubResource("SegmentShape2D_tk1ju")
+
+[node name="CameraChangeMainHallLeft" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("55_w4g4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraChangeMainHallLeft"]
+position = Vector2(-60, 443)
+shape = SubResource("SegmentShape2D_8a8qd")
 
 [node name="CameraChangeMainHall" type="Area2D" parent="."]
 collision_mask = 2
@@ -27688,7 +27720,7 @@ position = Vector2(-32, -30)
 
 [node name="Vase1" parent="VaseManager" instance=ExtResource("40_rlkim")]
 z_index = 3
-position = Vector2(302, 364)
+position = Vector2(87, 216)
 
 [node name="Vase2" parent="VaseManager" instance=ExtResource("41_5f3ba")]
 z_index = 3
@@ -27696,21 +27728,21 @@ position = Vector2(394, 364)
 
 [node name="Vase3" parent="VaseManager" instance=ExtResource("55_u1n6j")]
 z_index = 3
-position = Vector2(387, 428)
+position = Vector2(217, 219)
 
 [node name="Vase4" parent="VaseManager" instance=ExtResource("56_lopaa")]
 z_index = 3
-position = Vector2(404, 444)
+position = Vector2(403, 444)
 
 [node name="SkeletonManager" type="Node" parent="."]
 
 [node name="SkeletonHead" parent="SkeletonManager" instance=ExtResource("57_lxpfg")]
 z_index = 3
-position = Vector2(23, 627)
+position = Vector2(93, 446)
 
 [node name="SkeletonBody" parent="SkeletonManager" instance=ExtResource("58_1kot7")]
 z_index = 3
-position = Vector2(97, 634)
+position = Vector2(49, 636)
 
 [node name="Coffin" parent="SkeletonManager" instance=ExtResource("59_ut77y")]
 position = Vector2(-156, 572)
@@ -27719,16 +27751,23 @@ position = Vector2(-156, 572)
 z_index = 4
 position = Vector2(7, -14)
 
+[node name="CameraChangeBasementLeft" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("65_rycf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraChangeBasementLeft"]
+position = Vector2(-76, 585)
+shape = SubResource("SegmentShape2D_1q78f")
+
 [node name="CameraChangeBasement" type="Area2D" parent="."]
 collision_mask = 2
 script = ExtResource("61_3kr40")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraChangeBasement"]
-position = Vector2(-68, 571)
+position = Vector2(-60, 562)
 shape = SubResource("SegmentShape2D_lthbd")
 
 [node name="ZoomOutArea" type="Area2D" parent="."]
-visible = false
 collision_mask = 2
 script = ExtResource("62_6wixw")
 
@@ -27737,12 +27776,11 @@ position = Vector2(70.5, 324.5)
 shape = SubResource("RectangleShape2D_6ktqk")
 
 [node name="ZoomOutArea2" type="Area2D" parent="."]
-visible = false
 collision_mask = 2
 script = ExtResource("62_6wixw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoomOutArea2"]
-position = Vector2(121.5, 445.5)
+position = Vector2(129, 446)
 shape = SubResource("RectangleShape2D_v4sle")
 
 [node name="CutScene" type="Node2D" parent="."]
