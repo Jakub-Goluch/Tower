@@ -4,7 +4,9 @@ var destroyed = false
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var sprite2: Sprite2D = $Sprite2D2
 @onready var lever_left: Node2D = $LeverLeft
+
 var mouse_on = false
+@onready var break_sound: AudioStreamPlayer2D = $BreakSound
 
 
 var hand_cursor = preload("res://assets/cursors/hand_cursor.png")
@@ -27,6 +29,7 @@ func destroy_sunflower():
 	if !destroyed:
 		sprite.visible = false
 		sprite2.visible = true
+		break_sound.play()
 		lever_left.process_mode = Node.PROCESS_MODE_ALWAYS
 		destroyed = true
 	

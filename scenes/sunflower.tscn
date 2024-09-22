@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwmhubb4t8dlu" path="res://assets/interactive_sprites/sunflower.png" id="1_mxxlv"]
 [ext_resource type="Script" path="res://scripts/sunflower_button.gd" id="1_sg7pb"]
 [ext_resource type="Texture2D" uid="uid://xsf8wrac5emt" path="res://assets/interactive_sprites/sunflower 2.png" id="2_f6l7y"]
+[ext_resource type="AudioStream" uid="uid://bguq6ela7brmt" path="res://audio/sunflower_sound.mp3" id="4_cnjh4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnsik"]
 size = Vector2(20, 30)
@@ -32,3 +33,6 @@ shape = SubResource("RectangleShape2D_mnsik")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+
+[node name="BreakSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cnjh4")
