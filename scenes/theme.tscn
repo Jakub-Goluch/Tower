@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmorgy7bgi5mf"]
+
+[ext_resource type="Script" path="res://scripts/theme.gd" id="1_jsq71"]
+[ext_resource type="Texture2D" uid="uid://dvtd0d8gcyxut" path="res://assets/tower-gwj.png" id="2_adame"]
+
+[sub_resource type="Animation" id="Animation_mcex5"]
+resource_name = "run"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.366667, 1.23333, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgsta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wnovb"]
+_data = {
+"RESET": SubResource("Animation_tgsta"),
+"run": SubResource("Animation_mcex5")
+}
+
+[node name="Theme" type="Node2D"]
+script = ExtResource("1_jsq71")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(571, 311)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_adame")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wnovb")
+}
+autoplay = "run"
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = -5
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1, -2, 2, 648, 1152, 649, 1152, -2)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
