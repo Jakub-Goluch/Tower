@@ -85,9 +85,3 @@ func _process(delta):
 		else:
 			Events.skeleton_not_selected.emit()
 			
-		if Input.is_action_just_pressed("up"):
-			print("dupa")
-			if selected_item == null:
-				pass
-			else:
-				remove_sprite(selected_item.name)
