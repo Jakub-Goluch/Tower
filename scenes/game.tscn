@@ -27905,9 +27905,9 @@ text = "Sorry i'm late..."
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="CutScene/CutScenePlayer/CanvasLayer2"]
-offset_left = 705.5
+offset_left = 715.0
 offset_top = 263.0
-offset_right = 1067.5
+offset_right = 1106.0
 offset_bottom = 308.0
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 24
