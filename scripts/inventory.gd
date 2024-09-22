@@ -30,7 +30,7 @@ func add_sprite(item: Node2D) -> void:
 				if child.get_child(0).texture.resource_path != "res://assets/pickup_items/trup3.png":
 					child.get_child(0).position = Vector2(4,2)
 				else:
-					child.get_child(0).position -= Vector2(2,1)
+					child.get_child(0).position += Vector2(2,2)
 			else:
 				child.get_child(0).position = Vector2(1,-2)
 			break 
