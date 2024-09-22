@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://by5q3f2iqsjfo"]
+[gd_scene load_steps=7 format=3 uid="uid://by5q3f2iqsjfo"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_xdtnk"]
 [ext_resource type="Texture2D" uid="uid://odgg7my7vrw5" path="res://assets/UI/GUI-5.png" id="1_y7ogp"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cektoddcrfq03" path="res://assets/UI/GUI-5 2.png" id="3_a4w03"]
 [ext_resource type="Texture2D" uid="uid://cp6afrfa3moj1" path="res://assets/UI/text_background.png" id="3_h7bub"]
 [ext_resource type="Texture2D" uid="uid://bytmkoet5to54" path="res://assets/UI/GUI-5 1.png" id="4_2xi4p"]
-[ext_resource type="AudioStream" uid="uid://inxu4dkpo5ku" path="res://audio/menu_sound.mp3" id="7_ty8g7"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -134,6 +133,4 @@ text = "no hero no problem
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_ty8g7")
-volume_db = -2.0
+[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_mouse_entered"]
