@@ -38,9 +38,9 @@ with objects"
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 113.0
-offset_top = 97.0
+offset_top = 96.0
 offset_right = 1073.0
-offset_bottom = 249.0
+offset_bottom = 248.0
 theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("2_gkjic")
 theme_override_font_sizes/font_size = 32
