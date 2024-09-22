@@ -9,7 +9,7 @@ var right_position: Vector2
 
 func _ready():
 	connect("body_entered", move_camera)
-	right_position = Vector2(43.0 , 599.0) # elixir office
+	right_position = Vector2(45.0 , 600.0) # elixir office
 	#left_position = Vector2(-179.0, 549.0) # main bedroom
 	
 func move_camera(body):

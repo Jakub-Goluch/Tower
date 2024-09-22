@@ -29,6 +29,7 @@ func check_order():
 			#print(false)
 			#return false
 			flags_solved = false
+			print("***PUZZLE NOT SOLVED - LEFT***")
 			return
 	#print(true)
 	print("***PUZZLE SOLVED - LEFT***")
