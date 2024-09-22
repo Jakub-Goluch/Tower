@@ -12,6 +12,18 @@ func _ready():
 	#$FlagsRight/HBoxContainer.connect("right_solved", mark_right)
 	$FlagKey.visible = false
 	
+	# connect right flag signals to check in left
+	$"FlagsRight/HBoxContainer/5/TextureButton".connect("flags_changed", $FlagsLeft/HBoxContainer.check_order)
+	$"FlagsRight/HBoxContainer/6/TextureButton".connect("flags_changed", $FlagsLeft/HBoxContainer.check_order)
+	$"FlagsRight/HBoxContainer/7/TextureButton".connect("flags_changed", $FlagsLeft/HBoxContainer.check_order)
+	$"FlagsRight/HBoxContainer/8/TextureButton".connect("flags_changed", $FlagsLeft/HBoxContainer.check_order)
+
+	$"FlagsLeft/HBoxContainer/1/TextureButton".connect("flags_changed", $FlagsRight/HBoxContainer.check_order)
+	$"FlagsLeft/HBoxContainer/2/TextureButton".connect("flags_changed", $FlagsRight/HBoxContainer.check_order)
+	$"FlagsLeft/HBoxContainer/3/TextureButton".connect("flags_changed", $FlagsRight/HBoxContainer.check_order)
+	$"FlagsLeft/HBoxContainer/4/TextureButton".connect("flags_changed", $FlagsRight/HBoxContainer.check_order)
+
+	
 func _process(delta):
 	if !anim_played && count == 0:
 		#if left && right:

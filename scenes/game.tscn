@@ -27464,7 +27464,7 @@ offset_bottom = 106.118
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "Enraged, King Arthur the 1st condemned the fool to public humiliation and sent him to the rack"
+text = "Enraged, King Arthur the 1st condemned the fool to public humiliation and sent him to the rack."
 autowrap_mode = 2
 
 [node name="Label2" parent="BookStand3/BookCanvasLayer/Book/BookText" index="1"]
@@ -27915,7 +27915,7 @@ offset_right = 1067.5
 offset_bottom = 308.0
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 24
-text = "...I overslept"
+text = "...I've overslept"
 autowrap_mode = 2
 
 [node name="TextBackground2" type="Sprite2D" parent="CutScene/CutScenePlayer/CanvasLayer2"]
@@ -27976,6 +27976,8 @@ flip_v = true
 [editable path="Doors/Door6_OUT"]
 [editable path="Doors/Door7_OUT"]
 [editable path="Doors/Door_WIN"]
+[editable path="FlagManager/FlagsLeft"]
+[editable path="FlagManager/FlagsRight"]
 [editable path="Sunflower"]
 [editable path="Sunflower/LeverLeft/Door7_IN"]
 [editable path="LeverRight"]

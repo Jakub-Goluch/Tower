@@ -13,6 +13,7 @@ func _ready() -> void:
 	$"7/TextureButton".connect("flags_changed", check_order)
 	$"8/TextureButton".connect("flags_changed", check_order)
 	
+
 	correct_flag_order = ["res://assets/interactive_sprites/flag5.png", "res://assets/interactive_sprites/flag6.png", "res://assets/interactive_sprites/flag7.png", "res://assets/interactive_sprites/flag8.png"]
 	flags_solved = false
 	
@@ -28,6 +29,7 @@ func check_order():
 		if btn_slots[i].texture_normal.resource_path != correct_flag_order[i]:
 			#print(false)
 			flags_solved = false
+			print("***PUZZLE NOT SOLVED - RIGHT***")
 			return
 	#print(true)
 	print("***PUZZLE SOLVED - RIGHT***")
