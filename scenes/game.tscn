@@ -27132,17 +27132,21 @@ scale = Vector2(1.5, 0.2)
 stream = ExtResource("47_30t5t")
 
 [node name="LeverRight" parent="." instance=ExtResource("42_q0v8u")]
-position = Vector2(-80, 400)
+z_index = -1
+position = Vector2(101, 400)
 rotation = 3.14159
+
+[node name="LeverButton" parent="LeverRight" index="1"]
+z_index = 2
 
 [node name="Statue" type="Sprite2D" parent="LeverRight"]
 z_index = 1
-position = Vector2(-270, -52)
+position = Vector2(-91, -52)
 rotation = 3.14159
 texture = ExtResource("44_kiabc")
 
 [node name="MainRoomKey" parent="LeverRight" instance=ExtResource("38_we5os")]
-position = Vector2(-263, -85)
+position = Vector2(-83, -85)
 
 [node name="StatueSound" type="AudioStreamPlayer2D" parent="LeverRight"]
 stream = ExtResource("47_30t5t")
@@ -27259,6 +27263,7 @@ position = Vector2(96, 100)
 
 [node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand"]
 layer = 0
+visible = false
 
 [node name="Book" parent="BookStand/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
 position = Vector2(562, 388)
@@ -27287,7 +27292,7 @@ theme_override_colors/font_color = Color(0.42, 0.22834, 0.1092, 1)
 theme_override_constants/line_spacing = 3
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "May 9th
+text = "May 9th 1478:
 
 Today was an eventful day for King 
 Arthur the 
@@ -27328,14 +27333,13 @@ offset_bottom = 119.471
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "March 
-24th 1478:
+text = "May
+14th 1478:
 
 It seems that King Charles the 2nd’s kingdom has been pillaged and burned down."
 autowrap_mode = 2
 
 [node name="Label3" parent="BookStand/BookCanvasLayer/Book/BookText" index="2"]
-visible = false
 offset_right = -9.0
 offset_bottom = 69.0
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
@@ -27348,9 +27352,9 @@ autowrap_mode = 2
 
 [node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText/Label3" index="0"]
 offset_left = 121.882
-offset_top = -9.88236
+offset_top = -8.41177
 offset_right = 219.882
-offset_bottom = 47.1176
+offset_bottom = 48.5882
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
@@ -27780,6 +27784,7 @@ collision_mask = 2
 script = ExtResource("62_6wixw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoomOutArea2"]
+visible = false
 position = Vector2(129, 446)
 shape = SubResource("RectangleShape2D_v4sle")
 
@@ -27973,6 +27978,7 @@ flip_v = true
 [editable path="Doors/Door_WIN"]
 [editable path="Sunflower"]
 [editable path="Sunflower/LeverLeft/Door7_IN"]
+[editable path="LeverRight"]
 [editable path="BookStand/BookCanvasLayer/Book"]
 [editable path="BookStand/BookCanvasLayer/Book/BookText"]
 [editable path="BookStand2/BookCanvasLayer/Book"]
