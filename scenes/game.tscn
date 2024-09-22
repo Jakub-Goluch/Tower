@@ -27263,7 +27263,6 @@ position = Vector2(96, 100)
 
 [node name="BookCanvasLayer" type="CanvasLayer" parent="BookStand"]
 layer = 0
-visible = false
 
 [node name="Book" parent="BookStand/BookCanvasLayer" instance=ExtResource("12_m1ddo")]
 position = Vector2(562, 388)
@@ -27283,7 +27282,6 @@ mouse_filter = 0
 mouse_filter = 0
 
 [node name="Label" parent="BookStand/BookCanvasLayer/Book/BookText" index="0"]
-visible = false
 offset_left = -115.882
 offset_top = -50.3529
 offset_right = -6.88235
@@ -27292,7 +27290,7 @@ theme_override_colors/font_color = Color(0.42, 0.22834, 0.1092, 1)
 theme_override_constants/line_spacing = 3
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "May 9th 1478:
+text = "May 9th:
 
 Today was an eventful day for King 
 Arthur the 
@@ -27314,7 +27312,6 @@ text = "Once they sat down, word got around that Charles the 2nd’s kingdom was
 autowrap_mode = 2
 
 [node name="Label2" parent="BookStand/BookCanvasLayer/Book/BookText" index="1"]
-visible = false
 offset_left = -115.882
 offset_top = -50.0588
 offset_right = -7.88235
@@ -27333,8 +27330,7 @@ offset_bottom = 119.471
 theme_override_colors/font_color = Color(0.419608, 0.227451, 0.109804, 1)
 theme_override_fonts/font = ExtResource("16_7iike")
 theme_override_font_sizes/font_size = 8
-text = "May
-14th 1478:
+text = "May 14th:
 
 It seems that King Charles the 2nd’s kingdom has been pillaged and burned down."
 autowrap_mode = 2
